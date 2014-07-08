@@ -1,0 +1,1 @@
+A framework for communicating with Google Cast devices.
