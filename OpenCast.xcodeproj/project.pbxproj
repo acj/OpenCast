@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		641D83CD196CB592001700EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83CC196CB592001700EC /* Cocoa.framework */; };
+		641D83D7196CB592001700EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 641D83D5196CB592001700EC /* InfoPlist.strings */; };
+		641D83DB196CB592001700EC /* OpenCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83DA196CB592001700EC /* OpenCast.m */; };
+		641D83E2196CB592001700EC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83E1196CB592001700EC /* XCTest.framework */; };
+		641D83E3196CB592001700EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83CC196CB592001700EC /* Cocoa.framework */; };
+		641D83E6196CB592001700EC /* OpenCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83C9196CB592001700EC /* OpenCast.framework */; };
+		641D83EC196CB592001700EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 641D83EA196CB592001700EC /* InfoPlist.strings */; };
+		641D83EE196CB592001700EC /* OpenCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83ED196CB592001700EC /* OpenCastTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		641D83E4196CB592001700EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 641D83C0196CB592001700EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 641D83C8196CB592001700EC;
+			remoteInfo = OpenCast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		641D83C9196CB592001700EC /* OpenCast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenCast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		641D83CC196CB592001700EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		641D83CF196CB592001700EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		641D83D0196CB592001700EC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		641D83D1196CB592001700EC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		641D83D4196CB592001700EC /* OpenCast-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenCast-Info.plist"; sourceTree = "<group>"; };
+		641D83D6196CB592001700EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		641D83D8196CB592001700EC /* OpenCast-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCast-Prefix.pch"; sourceTree = "<group>"; };
+		641D83D9196CB592001700EC /* OpenCast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCast.h; sourceTree = "<group>"; };
+		641D83DA196CB592001700EC /* OpenCast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCast.m; sourceTree = "<group>"; };
+		641D83E0196CB592001700EC /* OpenCastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenCastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		641D83E1196CB592001700EC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		641D83E9196CB592001700EC /* OpenCastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenCastTests-Info.plist"; sourceTree = "<group>"; };
+		641D83EB196CB592001700EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		641D83ED196CB592001700EC /* OpenCastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCastTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		641D83C5196CB592001700EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641D83CD196CB592001700EC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641D83DD196CB592001700EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641D83E3196CB592001700EC /* Cocoa.framework in Frameworks */,
+				641D83E2196CB592001700EC /* XCTest.framework in Frameworks */,
+				641D83E6196CB592001700EC /* OpenCast.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		641D83BF196CB592001700EC = {
+			isa = PBXGroup;
+			children = (
+				641D83D2196CB592001700EC /* OpenCast */,
+				641D83E7196CB592001700EC /* OpenCastTests */,
+				641D83CB196CB592001700EC /* Frameworks */,
+				641D83CA196CB592001700EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		641D83CA196CB592001700EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				641D83C9196CB592001700EC /* OpenCast.framework */,
+				641D83E0196CB592001700EC /* OpenCastTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		641D83CB196CB592001700EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				641D83CC196CB592001700EC /* Cocoa.framework */,
+				641D83E1196CB592001700EC /* XCTest.framework */,
+				641D83CE196CB592001700EC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		641D83CE196CB592001700EC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				641D83CF196CB592001700EC /* Foundation.framework */,
+				641D83D0196CB592001700EC /* CoreData.framework */,
+				641D83D1196CB592001700EC /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		641D83D2196CB592001700EC /* OpenCast */ = {
+			isa = PBXGroup;
+			children = (
+				641D83D9196CB592001700EC /* OpenCast.h */,
+				641D83DA196CB592001700EC /* OpenCast.m */,
+				641D83D3196CB592001700EC /* Supporting Files */,
+			);
+			path = OpenCast;
+			sourceTree = "<group>";
+		};
+		641D83D3196CB592001700EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				641D83D4196CB592001700EC /* OpenCast-Info.plist */,
+				641D83D5196CB592001700EC /* InfoPlist.strings */,
+				641D83D8196CB592001700EC /* OpenCast-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		641D83E7196CB592001700EC /* OpenCastTests */ = {
+			isa = PBXGroup;
+			children = (
+				641D83ED196CB592001700EC /* OpenCastTests.m */,
+				641D83E8196CB592001700EC /* Supporting Files */,
+			);
+			path = OpenCastTests;
+			sourceTree = "<group>";
+		};
+		641D83E8196CB592001700EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				641D83E9196CB592001700EC /* OpenCastTests-Info.plist */,
+				641D83EA196CB592001700EC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		641D83C6196CB592001700EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		641D83C8196CB592001700EC /* OpenCast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641D83F1196CB592001700EC /* Build configuration list for PBXNativeTarget "OpenCast" */;
+			buildPhases = (
+				641D83C4196CB592001700EC /* Sources */,
+				641D83C5196CB592001700EC /* Frameworks */,
+				641D83C6196CB592001700EC /* Headers */,
+				641D83C7196CB592001700EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenCast;
+			productName = OpenCast;
+			productReference = 641D83C9196CB592001700EC /* OpenCast.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		641D83DF196CB592001700EC /* OpenCastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641D83F4196CB592001700EC /* Build configuration list for PBXNativeTarget "OpenCastTests" */;
+			buildPhases = (
+				641D83DC196CB592001700EC /* Sources */,
+				641D83DD196CB592001700EC /* Frameworks */,
+				641D83DE196CB592001700EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				641D83E5196CB592001700EC /* PBXTargetDependency */,
+			);
+			name = OpenCastTests;
+			productName = OpenCastTests;
+			productReference = 641D83E0196CB592001700EC /* OpenCastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		641D83C0196CB592001700EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Adam Jensen";
+				TargetAttributes = {
+					641D83DF196CB592001700EC = {
+						TestTargetID = 641D83C8196CB592001700EC;
+					};
+				};
+			};
+			buildConfigurationList = 641D83C3196CB592001700EC /* Build configuration list for PBXProject "OpenCast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 641D83BF196CB592001700EC;
+			productRefGroup = 641D83CA196CB592001700EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				641D83C8196CB592001700EC /* OpenCast */,
+				641D83DF196CB592001700EC /* OpenCastTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		641D83C7196CB592001700EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641D83D7196CB592001700EC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641D83DE196CB592001700EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641D83EC196CB592001700EC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		641D83C4196CB592001700EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641D83DB196CB592001700EC /* OpenCast.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641D83DC196CB592001700EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				641D83EE196CB592001700EC /* OpenCastTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		641D83E5196CB592001700EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 641D83C8196CB592001700EC /* OpenCast */;
+			targetProxy = 641D83E4196CB592001700EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		641D83D5196CB592001700EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				641D83D6196CB592001700EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		641D83EA196CB592001700EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				641D83EB196CB592001700EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		641D83EF196CB592001700EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		641D83F0196CB592001700EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		641D83F2196CB592001700EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenCast/OpenCast-Prefix.pch";
+				INFOPLIST_FILE = "OpenCast/OpenCast-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		641D83F3196CB592001700EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenCast/OpenCast-Prefix.pch";
+				INFOPLIST_FILE = "OpenCast/OpenCast-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		641D83F5196CB592001700EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenCast.framework/Versions/A/OpenCast";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenCast/OpenCast-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OpenCastTests/OpenCastTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		641D83F6196CB592001700EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenCast.framework/Versions/A/OpenCast";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenCast/OpenCast-Prefix.pch";
+				INFOPLIST_FILE = "OpenCastTests/OpenCastTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		641D83C3196CB592001700EC /* Build configuration list for PBXProject "OpenCast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641D83EF196CB592001700EC /* Debug */,
+				641D83F0196CB592001700EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		641D83F1196CB592001700EC /* Build configuration list for PBXNativeTarget "OpenCast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641D83F2196CB592001700EC /* Debug */,
+				641D83F3196CB592001700EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		641D83F4196CB592001700EC /* Build configuration list for PBXNativeTarget "OpenCastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641D83F5196CB592001700EC /* Debug */,
+				641D83F6196CB592001700EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 641D83C0196CB592001700EC /* Project object */;
+}
