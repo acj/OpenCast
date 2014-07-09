@@ -17,6 +17,8 @@
 		641D83EE196CB592001700EC /* OpenCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83ED196CB592001700EC /* OpenCastTests.m */; };
 		641D83F9196CB874001700EC /* OCDeviceScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83F7196CB874001700EC /* OCDeviceScanner.h */; };
 		641D83FA196CB874001700EC /* OCDeviceScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83F8196CB874001700EC /* OCDeviceScanner.m */; };
+		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; };
+		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		641D83ED196CB592001700EC /* OpenCastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCastTests.m; sourceTree = "<group>"; };
 		641D83F7196CB874001700EC /* OCDeviceScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDeviceScanner.h; sourceTree = "<group>"; };
 		641D83F8196CB874001700EC /* OCDeviceScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDeviceScanner.m; sourceTree = "<group>"; };
+		64BC9946196CCBBA003968FF /* OCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDevice.h; sourceTree = "<group>"; };
+		64BC9947196CCBBA003968FF /* OCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +117,13 @@
 		641D83D2196CB592001700EC /* OpenCast */ = {
 			isa = PBXGroup;
 			children = (
+				641D83F7196CB874001700EC /* OCDeviceScanner.h */,
+				641D83F8196CB874001700EC /* OCDeviceScanner.m */,
 				641D83D9196CB592001700EC /* OpenCast.h */,
 				641D83DA196CB592001700EC /* OpenCast.m */,
 				641D83D3196CB592001700EC /* Supporting Files */,
-				641D83F7196CB874001700EC /* OCDeviceScanner.h */,
-				641D83F8196CB874001700EC /* OCDeviceScanner.m */,
+				64BC9946196CCBBA003968FF /* OCDevice.h */,
+				64BC9947196CCBBA003968FF /* OCDevice.m */,
 			);
 			path = OpenCast;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BC9948196CCBBA003968FF /* OCDevice.h in Headers */,
 				641D83F9196CB874001700EC /* OCDeviceScanner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +265,7 @@
 			files = (
 				641D83FA196CB874001700EC /* OCDeviceScanner.m in Sources */,
 				641D83DB196CB592001700EC /* OpenCast.m in Sources */,
+				64BC9949196CCBBA003968FF /* OCDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
