@@ -19,6 +19,7 @@
 		641D83FA196CB874001700EC /* OCDeviceScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83F8196CB874001700EC /* OCDeviceScanner.m */; };
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
+		64BC995C196CD585003968FF /* OpenCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83D9196CB592001700EC /* OpenCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 			files = (
 				64BC9948196CCBBA003968FF /* OCDevice.h in Headers */,
 				641D83F9196CB874001700EC /* OCDeviceScanner.h in Headers */,
+				64BC995C196CD585003968FF /* OpenCast.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
