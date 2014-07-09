@@ -20,6 +20,8 @@
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
 		64BC995C196CD585003968FF /* OpenCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83D9196CB592001700EC /* OpenCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64BC9976196E0C3D003968FF /* cast_channel.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9974196E0C3D003968FF /* cast_channel.pb.h */; };
+		64BC9977196E0C3D003968FF /* cast_channel.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9975196E0C3D003968FF /* cast_channel.pb.m */; };
 		64BC9978196E0C8B003968FF /* libProtocolModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BC996E196E0BF9003968FF /* libProtocolModels.a */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +76,11 @@
 		641D83F8196CB874001700EC /* OCDeviceScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDeviceScanner.m; sourceTree = "<group>"; };
 		64BC9946196CCBBA003968FF /* OCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDevice.h; sourceTree = "<group>"; };
 		64BC9947196CCBBA003968FF /* OCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDevice.m; sourceTree = "<group>"; };
+		64BC9964196E0266003968FF /* OCDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDeviceManager.h; sourceTree = "<group>"; };
+		64BC9965196E0266003968FF /* OCDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDeviceManager.m; sourceTree = "<group>"; };
 		64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolModels.xcodeproj; path = Libraries/ProtobufRuntime/ProtocolModels.xcodeproj; sourceTree = "<group>"; };
+		64BC9974196E0C3D003968FF /* cast_channel.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cast_channel.pb.h; sourceTree = "<group>"; };
+		64BC9975196E0C3D003968FF /* cast_channel.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cast_channel.pb.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,8 @@
 		641D83D2196CB592001700EC /* OpenCast */ = {
 			isa = PBXGroup;
 			children = (
+				64BC9974196E0C3D003968FF /* cast_channel.pb.h */,
+				64BC9975196E0C3D003968FF /* cast_channel.pb.m */,
 				64BC9946196CCBBA003968FF /* OCDevice.h */,
 				64BC9947196CCBBA003968FF /* OCDevice.m */,
 				641D83F7196CB874001700EC /* OCDeviceScanner.h */,
@@ -206,6 +214,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BC9976196E0C3D003968FF /* cast_channel.pb.h in Headers */,
 				64BC9948196CCBBA003968FF /* OCDevice.h in Headers */,
 				641D83F9196CB874001700EC /* OCDeviceScanner.h in Headers */,
 				64BC995C196CD585003968FF /* OpenCast.h in Headers */,
@@ -331,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BC9977196E0C3D003968FF /* cast_channel.pb.m in Sources */,
 				641D83FA196CB874001700EC /* OCDeviceScanner.m in Sources */,
 				641D83DB196CB592001700EC /* OpenCast.m in Sources */,
 				64BC9949196CCBBA003968FF /* OCDevice.m in Sources */,
