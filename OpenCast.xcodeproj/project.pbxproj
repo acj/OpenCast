@@ -15,9 +15,9 @@
 		641D83E6196CB592001700EC /* OpenCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83C9196CB592001700EC /* OpenCast.framework */; };
 		641D83EC196CB592001700EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 641D83EA196CB592001700EC /* InfoPlist.strings */; };
 		641D83EE196CB592001700EC /* OpenCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83ED196CB592001700EC /* OpenCastTests.m */; };
-		641D83F9196CB874001700EC /* OCDeviceScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83F7196CB874001700EC /* OCDeviceScanner.h */; };
+		641D83F9196CB874001700EC /* OCDeviceScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83F7196CB874001700EC /* OCDeviceScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		641D83FA196CB874001700EC /* OCDeviceScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83F8196CB874001700EC /* OCDeviceScanner.m */; };
-		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; };
+		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
 /* End PBXBuildFile section */
 
@@ -117,13 +117,13 @@
 		641D83D2196CB592001700EC /* OpenCast */ = {
 			isa = PBXGroup;
 			children = (
+				64BC9946196CCBBA003968FF /* OCDevice.h */,
+				64BC9947196CCBBA003968FF /* OCDevice.m */,
 				641D83F7196CB874001700EC /* OCDeviceScanner.h */,
 				641D83F8196CB874001700EC /* OCDeviceScanner.m */,
 				641D83D9196CB592001700EC /* OpenCast.h */,
 				641D83DA196CB592001700EC /* OpenCast.m */,
 				641D83D3196CB592001700EC /* Supporting Files */,
-				64BC9946196CCBBA003968FF /* OCDevice.h */,
-				64BC9947196CCBBA003968FF /* OCDevice.m */,
 			);
 			path = OpenCast;
 			sourceTree = "<group>";
