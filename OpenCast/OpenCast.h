@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "OCDevice.h"
+#import "OCDeviceScanner.h"
+
 @interface OpenCast : NSObject
 
 @end
