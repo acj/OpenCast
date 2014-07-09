@@ -20,6 +20,7 @@
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
 		64BC995C196CD585003968FF /* OpenCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83D9196CB592001700EC /* OpenCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64BC9978196E0C8B003968FF /* libProtocolModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BC996E196E0BF9003968FF /* libProtocolModels.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 641D83C8196CB592001700EC;
 			remoteInfo = OpenCast;
+		};
+		64BC996D196E0BF9003968FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ProtocolModels;
+		};
+		64BC996F196E0BF9003968FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C5B03F76125179F30087887C;
+			remoteInfo = UnitTests;
+		};
+		64BC9972196E0C31003968FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ProtocolModels;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,6 +74,7 @@
 		641D83F8196CB874001700EC /* OCDeviceScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDeviceScanner.m; sourceTree = "<group>"; };
 		64BC9946196CCBBA003968FF /* OCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDevice.h; sourceTree = "<group>"; };
 		64BC9947196CCBBA003968FF /* OCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDevice.m; sourceTree = "<group>"; };
+		64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolModels.xcodeproj; path = Libraries/ProtobufRuntime/ProtocolModels.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BC9978196E0C8B003968FF /* libProtocolModels.a in Frameworks */,
 				641D83CD196CB592001700EC /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +105,7 @@
 			children = (
 				641D83D2196CB592001700EC /* OpenCast */,
 				641D83E7196CB592001700EC /* OpenCastTests */,
+				64BC9971196E0C07003968FF /* Libraries */,
 				641D83CB196CB592001700EC /* Frameworks */,
 				641D83CA196CB592001700EC /* Products */,
 			);
@@ -157,6 +182,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		64BC9969196E0BF9003968FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64BC996E196E0BF9003968FF /* libProtocolModels.a */,
+				64BC9970196E0BF9003968FF /* UnitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64BC9971196E0C07003968FF /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -185,6 +227,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				64BC9973196E0C31003968FF /* PBXTargetDependency */,
 			);
 			name = OpenCast;
 			productName = OpenCast;
@@ -233,6 +276,12 @@
 			mainGroup = 641D83BF196CB592001700EC;
 			productRefGroup = 641D83CA196CB592001700EC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 64BC9969196E0BF9003968FF /* Products */;
+					ProjectRef = 64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				641D83C8196CB592001700EC /* OpenCast */,
@@ -240,6 +289,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		64BC996E196E0BF9003968FF /* libProtocolModels.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libProtocolModels.a;
+			remoteRef = 64BC996D196E0BF9003968FF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		64BC9970196E0BF9003968FF /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = 64BC996F196E0BF9003968FF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		641D83C7196CB592001700EC /* Resources */ = {
@@ -286,6 +352,11 @@
 			isa = PBXTargetDependency;
 			target = 641D83C8196CB592001700EC /* OpenCast */;
 			targetProxy = 641D83E4196CB592001700EC /* PBXContainerItemProxy */;
+		};
+		64BC9973196E0C31003968FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ProtocolModels;
+			targetProxy = 64BC9972196E0C31003968FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
