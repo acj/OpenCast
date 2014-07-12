@@ -22,7 +22,48 @@
 		64BC995C196CD585003968FF /* OpenCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83D9196CB592001700EC /* OpenCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9976196E0C3D003968FF /* cast_channel.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9974196E0C3D003968FF /* cast_channel.pb.h */; };
 		64BC9977196E0C3D003968FF /* cast_channel.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9975196E0C3D003968FF /* cast_channel.pb.m */; };
-		64BC9978196E0C8B003968FF /* libProtocolModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BC996E196E0BF9003968FF /* libProtocolModels.a */; };
+		64BC99ED196E27E3003968FF /* CodedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC997C196E27E2003968FF /* CodedInputStream.h */; };
+		64BC99EE196E27E3003968FF /* CodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC997D196E27E2003968FF /* CodedInputStream.m */; };
+		64BC99EF196E27E3003968FF /* CodedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC997E196E27E2003968FF /* CodedOutputStream.h */; };
+		64BC99F0196E27E3003968FF /* CodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC997F196E27E2003968FF /* CodedOutputStream.m */; };
+		64BC99F1196E27E3003968FF /* ExtendableMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9980196E27E2003968FF /* ExtendableMessage.h */; };
+		64BC99F2196E27E3003968FF /* ExtendableMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9981196E27E2003968FF /* ExtendableMessage.m */; };
+		64BC99F3196E27E3003968FF /* ExtendableMessage_Builder.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9982196E27E2003968FF /* ExtendableMessage_Builder.h */; };
+		64BC99F4196E27E3003968FF /* ExtendableMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9983196E27E2003968FF /* ExtendableMessage_Builder.m */; };
+		64BC99F5196E27E3003968FF /* ExtensionField.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9984196E27E2003968FF /* ExtensionField.h */; };
+		64BC99F6196E27E3003968FF /* ExtensionField.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9985196E27E2003968FF /* ExtensionField.m */; };
+		64BC99F7196E27E3003968FF /* ExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9986196E27E2003968FF /* ExtensionRegistry.h */; };
+		64BC99F8196E27E3003968FF /* ExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9987196E27E2003968FF /* ExtensionRegistry.m */; };
+		64BC99F9196E27E3003968FF /* Field.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9988196E27E2003968FF /* Field.h */; };
+		64BC99FA196E27E3003968FF /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9989196E27E2003968FF /* Field.m */; };
+		64BC99FB196E27E3003968FF /* GeneratedMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC998A196E27E2003968FF /* GeneratedMessage.h */; };
+		64BC99FC196E27E3003968FF /* GeneratedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC998B196E27E2003968FF /* GeneratedMessage.m */; };
+		64BC99FD196E27E3003968FF /* GeneratedMessage_Builder.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC998C196E27E2003968FF /* GeneratedMessage_Builder.h */; };
+		64BC99FE196E27E3003968FF /* GeneratedMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC998D196E27E2003968FF /* GeneratedMessage_Builder.m */; };
+		64BC99FF196E27E3003968FF /* Message.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC998E196E27E2003968FF /* Message.h */; };
+		64BC9A00196E27E3003968FF /* Message_Builder.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC998F196E27E2003968FF /* Message_Builder.h */; };
+		64BC9A01196E27E3003968FF /* MutableExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9990196E27E2003968FF /* MutableExtensionRegistry.h */; };
+		64BC9A02196E27E3003968FF /* MutableExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9991196E27E2003968FF /* MutableExtensionRegistry.m */; };
+		64BC9A03196E27E3003968FF /* MutableField.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9992196E27E2003968FF /* MutableField.h */; };
+		64BC9A04196E27E3003968FF /* MutableField.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9993196E27E2003968FF /* MutableField.m */; };
+		64BC9A05196E27E3003968FF /* PBArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9994196E27E2003968FF /* PBArray.h */; };
+		64BC9A06196E27E3003968FF /* PBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9995196E27E2003968FF /* PBArray.m */; };
+		64BC9A07196E27E3003968FF /* ProtocolModels.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9996196E27E2003968FF /* ProtocolModels.h */; };
+		64BC9A08196E27E3003968FF /* RingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9997196E27E2003968FF /* RingBuffer.h */; };
+		64BC9A09196E27E3003968FF /* RingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9998196E27E2003968FF /* RingBuffer.m */; };
+		64BC9A0A196E27E3003968FF /* UnknownFieldSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9999196E27E2003968FF /* UnknownFieldSet.h */; };
+		64BC9A0B196E27E3003968FF /* UnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC999A196E27E2003968FF /* UnknownFieldSet.m */; };
+		64BC9A0C196E27E3003968FF /* UnknownFieldSet_Builder.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC999B196E27E2003968FF /* UnknownFieldSet_Builder.h */; };
+		64BC9A0D196E27E3003968FF /* UnknownFieldSet_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC999C196E27E2003968FF /* UnknownFieldSet_Builder.m */; };
+		64BC9A0E196E27E3003968FF /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC999D196E27E2003968FF /* Utilities.h */; };
+		64BC9A0F196E27E3003968FF /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC999E196E27E2003968FF /* Utilities.m */; };
+		64BC9A10196E27E3003968FF /* WireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC999F196E27E2003968FF /* WireFormat.h */; };
+		64BC9A11196E27E3003968FF /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC99A0196E27E2003968FF /* WireFormat.m */; };
+		64BC9A12196E27E3003968FF /* golden_message in Resources */ = {isa = PBXBuildFile; fileRef = 64BC99A1196E27E2003968FF /* golden_message */; };
+		64BC9A13196E27E3003968FF /* golden_packed_fields_message in Resources */ = {isa = PBXBuildFile; fileRef = 64BC99A2196E27E2003968FF /* golden_packed_fields_message */; };
+		64BC9A14196E27E3003968FF /* ProtocolModels_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 64BC99A7196E27E3003968FF /* ProtocolModels_Prefix.pch */; };
+		64BC9A15196E27E3003968FF /* UnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64BC99A8196E27E3003968FF /* UnitTests-Info.plist */; };
+		64BC9A5A196E27FE003968FF /* libProtocolModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BC9A57196E27E3003968FF /* libProtocolModels.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,26 +74,19 @@
 			remoteGlobalIDString = 641D83C8196CB592001700EC;
 			remoteInfo = OpenCast;
 		};
-		64BC996D196E0BF9003968FF /* PBXContainerItemProxy */ = {
+		64BC9A56196E27E3003968FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */;
+			containerPortal = 64BC99A3196E27E2003968FF /* ProtocolModels.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = ProtocolModels;
 		};
-		64BC996F196E0BF9003968FF /* PBXContainerItemProxy */ = {
+		64BC9A58196E27E3003968FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */;
+			containerPortal = 64BC99A3196E27E2003968FF /* ProtocolModels.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C5B03F76125179F30087887C;
 			remoteInfo = UnitTests;
-		};
-		64BC9972196E0C31003968FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = ProtocolModels;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -78,9 +112,50 @@
 		64BC9947196CCBBA003968FF /* OCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDevice.m; sourceTree = "<group>"; };
 		64BC9964196E0266003968FF /* OCDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDeviceManager.h; sourceTree = "<group>"; };
 		64BC9965196E0266003968FF /* OCDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDeviceManager.m; sourceTree = "<group>"; };
-		64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolModels.xcodeproj; path = Libraries/ProtobufRuntime/ProtocolModels.xcodeproj; sourceTree = "<group>"; };
 		64BC9974196E0C3D003968FF /* cast_channel.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cast_channel.pb.h; sourceTree = "<group>"; };
 		64BC9975196E0C3D003968FF /* cast_channel.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cast_channel.pb.m; sourceTree = "<group>"; };
+		64BC997C196E27E2003968FF /* CodedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodedInputStream.h; sourceTree = "<group>"; };
+		64BC997D196E27E2003968FF /* CodedInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodedInputStream.m; sourceTree = "<group>"; };
+		64BC997E196E27E2003968FF /* CodedOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodedOutputStream.h; sourceTree = "<group>"; };
+		64BC997F196E27E2003968FF /* CodedOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodedOutputStream.m; sourceTree = "<group>"; };
+		64BC9980196E27E2003968FF /* ExtendableMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendableMessage.h; sourceTree = "<group>"; };
+		64BC9981196E27E2003968FF /* ExtendableMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendableMessage.m; sourceTree = "<group>"; };
+		64BC9982196E27E2003968FF /* ExtendableMessage_Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendableMessage_Builder.h; sourceTree = "<group>"; };
+		64BC9983196E27E2003968FF /* ExtendableMessage_Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendableMessage_Builder.m; sourceTree = "<group>"; };
+		64BC9984196E27E2003968FF /* ExtensionField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionField.h; sourceTree = "<group>"; };
+		64BC9985196E27E2003968FF /* ExtensionField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionField.m; sourceTree = "<group>"; };
+		64BC9986196E27E2003968FF /* ExtensionRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionRegistry.h; sourceTree = "<group>"; };
+		64BC9987196E27E2003968FF /* ExtensionRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionRegistry.m; sourceTree = "<group>"; };
+		64BC9988196E27E2003968FF /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
+		64BC9989196E27E2003968FF /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
+		64BC998A196E27E2003968FF /* GeneratedMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedMessage.h; sourceTree = "<group>"; };
+		64BC998B196E27E2003968FF /* GeneratedMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedMessage.m; sourceTree = "<group>"; };
+		64BC998C196E27E2003968FF /* GeneratedMessage_Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedMessage_Builder.h; sourceTree = "<group>"; };
+		64BC998D196E27E2003968FF /* GeneratedMessage_Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedMessage_Builder.m; sourceTree = "<group>"; };
+		64BC998E196E27E2003968FF /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		64BC998F196E27E2003968FF /* Message_Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message_Builder.h; sourceTree = "<group>"; };
+		64BC9990196E27E2003968FF /* MutableExtensionRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableExtensionRegistry.h; sourceTree = "<group>"; };
+		64BC9991196E27E2003968FF /* MutableExtensionRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutableExtensionRegistry.m; sourceTree = "<group>"; };
+		64BC9992196E27E2003968FF /* MutableField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableField.h; sourceTree = "<group>"; };
+		64BC9993196E27E2003968FF /* MutableField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutableField.m; sourceTree = "<group>"; };
+		64BC9994196E27E2003968FF /* PBArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBArray.h; sourceTree = "<group>"; };
+		64BC9995196E27E2003968FF /* PBArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBArray.m; sourceTree = "<group>"; };
+		64BC9996196E27E2003968FF /* ProtocolModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolModels.h; sourceTree = "<group>"; };
+		64BC9997196E27E2003968FF /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
+		64BC9998196E27E2003968FF /* RingBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RingBuffer.m; sourceTree = "<group>"; };
+		64BC9999196E27E2003968FF /* UnknownFieldSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnknownFieldSet.h; sourceTree = "<group>"; };
+		64BC999A196E27E2003968FF /* UnknownFieldSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnknownFieldSet.m; sourceTree = "<group>"; };
+		64BC999B196E27E2003968FF /* UnknownFieldSet_Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnknownFieldSet_Builder.h; sourceTree = "<group>"; };
+		64BC999C196E27E2003968FF /* UnknownFieldSet_Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnknownFieldSet_Builder.m; sourceTree = "<group>"; };
+		64BC999D196E27E2003968FF /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		64BC999E196E27E2003968FF /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		64BC999F196E27E2003968FF /* WireFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WireFormat.h; sourceTree = "<group>"; };
+		64BC99A0196E27E2003968FF /* WireFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WireFormat.m; sourceTree = "<group>"; };
+		64BC99A1196E27E2003968FF /* golden_message */ = {isa = PBXFileReference; lastKnownFileType = file; path = golden_message; sourceTree = "<group>"; };
+		64BC99A2196E27E2003968FF /* golden_packed_fields_message */ = {isa = PBXFileReference; lastKnownFileType = file; path = golden_packed_fields_message; sourceTree = "<group>"; };
+		64BC99A3196E27E2003968FF /* ProtocolModels.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ProtocolModels.xcodeproj; sourceTree = "<group>"; };
+		64BC99A7196E27E3003968FF /* ProtocolModels_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolModels_Prefix.pch; sourceTree = "<group>"; };
+		64BC99A8196E27E3003968FF /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64BC9978196E0C8B003968FF /* libProtocolModels.a in Frameworks */,
+				64BC9A5A196E27FE003968FF /* libProtocolModels.a in Frameworks */,
 				641D83CD196CB592001700EC /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,21 +265,87 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		64BC9969196E0BF9003968FF /* Products */ = {
+		64BC9971196E0C07003968FF /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				64BC996E196E0BF9003968FF /* libProtocolModels.a */,
-				64BC9970196E0BF9003968FF /* UnitTests.xctest */,
+				64BC997A196E27E2003968FF /* ProtobufRuntime */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		64BC997A196E27E2003968FF /* ProtobufRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				64BC997B196E27E2003968FF /* Classes */,
+				64BC99A1196E27E2003968FF /* golden_message */,
+				64BC99A2196E27E2003968FF /* golden_packed_fields_message */,
+				64BC99A3196E27E2003968FF /* ProtocolModels.xcodeproj */,
+				64BC99A6196E27E3003968FF /* Target */,
+			);
+			name = ProtobufRuntime;
+			path = Libraries/ProtobufRuntime;
+			sourceTree = "<group>";
+		};
+		64BC997B196E27E2003968FF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				64BC997C196E27E2003968FF /* CodedInputStream.h */,
+				64BC997D196E27E2003968FF /* CodedInputStream.m */,
+				64BC997E196E27E2003968FF /* CodedOutputStream.h */,
+				64BC997F196E27E2003968FF /* CodedOutputStream.m */,
+				64BC9980196E27E2003968FF /* ExtendableMessage.h */,
+				64BC9981196E27E2003968FF /* ExtendableMessage.m */,
+				64BC9982196E27E2003968FF /* ExtendableMessage_Builder.h */,
+				64BC9983196E27E2003968FF /* ExtendableMessage_Builder.m */,
+				64BC9984196E27E2003968FF /* ExtensionField.h */,
+				64BC9985196E27E2003968FF /* ExtensionField.m */,
+				64BC9986196E27E2003968FF /* ExtensionRegistry.h */,
+				64BC9987196E27E2003968FF /* ExtensionRegistry.m */,
+				64BC9988196E27E2003968FF /* Field.h */,
+				64BC9989196E27E2003968FF /* Field.m */,
+				64BC998A196E27E2003968FF /* GeneratedMessage.h */,
+				64BC998B196E27E2003968FF /* GeneratedMessage.m */,
+				64BC998C196E27E2003968FF /* GeneratedMessage_Builder.h */,
+				64BC998D196E27E2003968FF /* GeneratedMessage_Builder.m */,
+				64BC998E196E27E2003968FF /* Message.h */,
+				64BC998F196E27E2003968FF /* Message_Builder.h */,
+				64BC9990196E27E2003968FF /* MutableExtensionRegistry.h */,
+				64BC9991196E27E2003968FF /* MutableExtensionRegistry.m */,
+				64BC9992196E27E2003968FF /* MutableField.h */,
+				64BC9993196E27E2003968FF /* MutableField.m */,
+				64BC9994196E27E2003968FF /* PBArray.h */,
+				64BC9995196E27E2003968FF /* PBArray.m */,
+				64BC9996196E27E2003968FF /* ProtocolModels.h */,
+				64BC9997196E27E2003968FF /* RingBuffer.h */,
+				64BC9998196E27E2003968FF /* RingBuffer.m */,
+				64BC9999196E27E2003968FF /* UnknownFieldSet.h */,
+				64BC999A196E27E2003968FF /* UnknownFieldSet.m */,
+				64BC999B196E27E2003968FF /* UnknownFieldSet_Builder.h */,
+				64BC999C196E27E2003968FF /* UnknownFieldSet_Builder.m */,
+				64BC999D196E27E2003968FF /* Utilities.h */,
+				64BC999E196E27E2003968FF /* Utilities.m */,
+				64BC999F196E27E2003968FF /* WireFormat.h */,
+				64BC99A0196E27E2003968FF /* WireFormat.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		64BC99A4196E27E2003968FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64BC9A57196E27E3003968FF /* libProtocolModels.a */,
+				64BC9A59196E27E3003968FF /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		64BC9971196E0C07003968FF /* Libraries */ = {
+		64BC99A6196E27E3003968FF /* Target */ = {
 			isa = PBXGroup;
 			children = (
-				64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */,
+				64BC99A7196E27E3003968FF /* ProtocolModels_Prefix.pch */,
+				64BC99A8196E27E3003968FF /* UnitTests-Info.plist */,
 			);
-			name = Libraries;
+			path = Target;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,10 +355,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BC9A05196E27E3003968FF /* PBArray.h in Headers */,
+				64BC9A14196E27E3003968FF /* ProtocolModels_Prefix.pch in Headers */,
+				64BC99FB196E27E3003968FF /* GeneratedMessage.h in Headers */,
 				64BC9976196E0C3D003968FF /* cast_channel.pb.h in Headers */,
+				64BC9A00196E27E3003968FF /* Message_Builder.h in Headers */,
+				64BC99FD196E27E3003968FF /* GeneratedMessage_Builder.h in Headers */,
+				64BC9966196E0266003968FF /* OCDeviceManager.h in Headers */,
+				64BC99F1196E27E3003968FF /* ExtendableMessage.h in Headers */,
+				64BC9A0A196E27E3003968FF /* UnknownFieldSet.h in Headers */,
 				64BC9948196CCBBA003968FF /* OCDevice.h in Headers */,
+				64BC9A07196E27E3003968FF /* ProtocolModels.h in Headers */,
+				64BC99ED196E27E3003968FF /* CodedInputStream.h in Headers */,
+				64BC9A08196E27E3003968FF /* RingBuffer.h in Headers */,
+				64BC99FF196E27E3003968FF /* Message.h in Headers */,
+				64BC9A10196E27E3003968FF /* WireFormat.h in Headers */,
+				64BC99F3196E27E3003968FF /* ExtendableMessage_Builder.h in Headers */,
 				641D83F9196CB874001700EC /* OCDeviceScanner.h in Headers */,
+				64BC99F5196E27E3003968FF /* ExtensionField.h in Headers */,
+				64BC9A01196E27E3003968FF /* MutableExtensionRegistry.h in Headers */,
 				64BC995C196CD585003968FF /* OpenCast.h in Headers */,
+				64BC99F9196E27E3003968FF /* Field.h in Headers */,
+				64BC99F7196E27E3003968FF /* ExtensionRegistry.h in Headers */,
+				64BC9A03196E27E3003968FF /* MutableField.h in Headers */,
+				64BC9A0E196E27E3003968FF /* Utilities.h in Headers */,
+				64BC9A0C196E27E3003968FF /* UnknownFieldSet_Builder.h in Headers */,
+				64BC99EF196E27E3003968FF /* CodedOutputStream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +399,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				64BC9973196E0C31003968FF /* PBXTargetDependency */,
 			);
 			name = OpenCast;
 			productName = OpenCast;
@@ -287,8 +449,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 64BC9969196E0BF9003968FF /* Products */;
-					ProjectRef = 64BC9968196E0BF9003968FF /* ProtocolModels.xcodeproj */;
+					ProductGroup = 64BC99A4196E27E2003968FF /* Products */;
+					ProjectRef = 64BC99A3196E27E2003968FF /* ProtocolModels.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -300,18 +462,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		64BC996E196E0BF9003968FF /* libProtocolModels.a */ = {
+		64BC9A57196E27E3003968FF /* libProtocolModels.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libProtocolModels.a;
-			remoteRef = 64BC996D196E0BF9003968FF /* PBXContainerItemProxy */;
+			remoteRef = 64BC9A56196E27E3003968FF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		64BC9970196E0BF9003968FF /* UnitTests.xctest */ = {
+		64BC9A59196E27E3003968FF /* UnitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = UnitTests.xctest;
-			remoteRef = 64BC996F196E0BF9003968FF /* PBXContainerItemProxy */;
+			remoteRef = 64BC9A58196E27E3003968FF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -321,7 +483,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BC9A13196E27E3003968FF /* golden_packed_fields_message in Resources */,
 				641D83D7196CB592001700EC /* InfoPlist.strings in Resources */,
+				64BC9A15196E27E3003968FF /* UnitTests-Info.plist in Resources */,
+				64BC9A12196E27E3003968FF /* golden_message in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,10 +505,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BC99FC196E27E3003968FF /* GeneratedMessage.m in Sources */,
+				64BC99F8196E27E3003968FF /* ExtensionRegistry.m in Sources */,
+				64BC99F0196E27E3003968FF /* CodedOutputStream.m in Sources */,
+				64BC9A06196E27E3003968FF /* PBArray.m in Sources */,
+				64BC9A0B196E27E3003968FF /* UnknownFieldSet.m in Sources */,
 				64BC9977196E0C3D003968FF /* cast_channel.pb.m in Sources */,
+				64BC99F6196E27E3003968FF /* ExtensionField.m in Sources */,
+				64BC9A02196E27E3003968FF /* MutableExtensionRegistry.m in Sources */,
 				641D83FA196CB874001700EC /* OCDeviceScanner.m in Sources */,
+				64BC9A04196E27E3003968FF /* MutableField.m in Sources */,
+				64BC9A0D196E27E3003968FF /* UnknownFieldSet_Builder.m in Sources */,
+				64BC9A11196E27E3003968FF /* WireFormat.m in Sources */,
+				64BC9967196E0266003968FF /* OCDeviceManager.m in Sources */,
+				64BC9A0F196E27E3003968FF /* Utilities.m in Sources */,
+				64BC99FA196E27E3003968FF /* Field.m in Sources */,
+				64BC9A09196E27E3003968FF /* RingBuffer.m in Sources */,
 				641D83DB196CB592001700EC /* OpenCast.m in Sources */,
+				64BC99F4196E27E3003968FF /* ExtendableMessage_Builder.m in Sources */,
+				64BC99EE196E27E3003968FF /* CodedInputStream.m in Sources */,
 				64BC9949196CCBBA003968FF /* OCDevice.m in Sources */,
+				64BC99F2196E27E3003968FF /* ExtendableMessage.m in Sources */,
+				64BC99FE196E27E3003968FF /* GeneratedMessage_Builder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,11 +545,6 @@
 			isa = PBXTargetDependency;
 			target = 641D83C8196CB592001700EC /* OpenCast */;
 			targetProxy = 641D83E4196CB592001700EC /* PBXContainerItemProxy */;
-		};
-		64BC9973196E0C31003968FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ProtocolModels;
-			targetProxy = 64BC9972196E0C31003968FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
