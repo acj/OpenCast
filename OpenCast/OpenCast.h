@@ -11,6 +11,7 @@
 #import "OCCastChannel.h"
 #import "OCConstants.h"
 #import "OCDevice.h"
+#import "OCDeviceManager.h"
 #import "OCDeviceScanner.h"
 
 @interface OpenCast : NSObject
