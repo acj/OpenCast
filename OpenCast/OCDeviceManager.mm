@@ -110,7 +110,6 @@ using namespace extensions::api::cast_channel;
 #pragma mark NSStreamDelegate
 
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode {
-    // TODO
     switch (eventCode) {
         case NSStreamEventNone:
         {
