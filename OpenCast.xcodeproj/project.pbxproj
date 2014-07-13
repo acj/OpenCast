@@ -64,6 +64,8 @@
 		64BC9A14196E27E3003968FF /* ProtocolModels_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 64BC99A7196E27E3003968FF /* ProtocolModels_Prefix.pch */; };
 		64BC9A15196E27E3003968FF /* UnitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64BC99A8196E27E3003968FF /* UnitTests-Info.plist */; };
 		64BC9A5A196E27FE003968FF /* libProtocolModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BC9A57196E27E3003968FF /* libProtocolModels.a */; };
+		64BC9A5D1970D7AF003968FF /* OCCastChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9A5B1970D7AF003968FF /* OCCastChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64BC9A5E1970D7AF003968FF /* OCCastChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9A5C1970D7AF003968FF /* OCCastChannel.m */; };
 		64BC9A651971A9DC003968FF /* OCConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9A631971A9DC003968FF /* OCConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9A661971A9DC003968FF /* OCConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9A641971A9DC003968FF /* OCConstants.m */; };
 /* End PBXBuildFile section */
@@ -158,6 +160,8 @@
 		64BC99A3196E27E2003968FF /* ProtocolModels.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ProtocolModels.xcodeproj; sourceTree = "<group>"; };
 		64BC99A7196E27E3003968FF /* ProtocolModels_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolModels_Prefix.pch; sourceTree = "<group>"; };
 		64BC99A8196E27E3003968FF /* UnitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		64BC9A5B1970D7AF003968FF /* OCCastChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCCastChannel.h; sourceTree = "<group>"; };
+		64BC9A5C1970D7AF003968FF /* OCCastChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCCastChannel.m; sourceTree = "<group>"; };
 		64BC9A631971A9DC003968FF /* OCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConstants.h; sourceTree = "<group>"; };
 		64BC9A641971A9DC003968FF /* OCConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +234,8 @@
 			children = (
 				64BC9974196E0C3D003968FF /* cast_channel.pb.h */,
 				64BC9975196E0C3D003968FF /* cast_channel.pb.m */,
+				64BC9A5B1970D7AF003968FF /* OCCastChannel.h */,
+				64BC9A5C1970D7AF003968FF /* OCCastChannel.m */,
 				64BC9A631971A9DC003968FF /* OCConstants.h */,
 				64BC9A641971A9DC003968FF /* OCConstants.m */,
 				64BC9946196CCBBA003968FF /* OCDevice.h */,
