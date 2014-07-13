@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "OCConstants.h"
 #import "OCDevice.h"
 #import "OCDeviceScanner.h"
 
