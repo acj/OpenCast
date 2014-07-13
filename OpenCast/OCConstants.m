@@ -17,4 +17,6 @@ NSString* OpenCastNamespaceReceiver = @"urn:x-cast:com.google.cast.receiver";
 NSString* SourceIdDefault = @"sender-0";
 NSString* DestinationIdDefault = @"receiver-0";
 
+NSString* CastAppIdDefaultMediaReceiver = @"CC1AD845";
+
 @end

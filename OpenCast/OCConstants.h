@@ -17,4 +17,6 @@ extern NSString* OpenCastNamespaceReceiver;
 extern NSString* SourceIdDefault;
 extern NSString* DestinationIdDefault;
 
+extern NSString* CastAppIdDefaultMediaReceiver;
+
 @end
