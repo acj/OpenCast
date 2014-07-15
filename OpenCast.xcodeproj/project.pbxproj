@@ -106,6 +106,8 @@
 		6472867E1974AC1800DE0A0A /* OCHeartbeatChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */; };
 		647286811974B0F900DE0A0A /* OCConnectionChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472867F1974B0F900DE0A0A /* OCConnectionChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		647286821974B0F900DE0A0A /* OCConnectionChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 647286801974B0F900DE0A0A /* OCConnectionChannel.m */; };
+		647286981974C3FC00DE0A0A /* OCReceiverControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 647286961974C3FC00DE0A0A /* OCReceiverControlChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		647286991974C3FC00DE0A0A /* OCReceiverControlChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */; };
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
 		64BC995C196CD585003968FF /* OpenCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83D9196CB592001700EC /* OpenCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -234,6 +236,8 @@
 		6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCHeartbeatChannel.m; sourceTree = "<group>"; };
 		6472867F1974B0F900DE0A0A /* OCConnectionChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConnectionChannel.h; sourceTree = "<group>"; };
 		647286801974B0F900DE0A0A /* OCConnectionChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCConnectionChannel.m; sourceTree = "<group>"; };
+		647286961974C3FC00DE0A0A /* OCReceiverControlChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCReceiverControlChannel.h; sourceTree = "<group>"; };
+		647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCReceiverControlChannel.m; sourceTree = "<group>"; };
 		64BC9946196CCBBA003968FF /* OCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDevice.h; sourceTree = "<group>"; };
 		64BC9947196CCBBA003968FF /* OCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDevice.m; sourceTree = "<group>"; };
 		64BC9964196E0266003968FF /* OCDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDeviceManager.h; sourceTree = "<group>"; };
@@ -327,6 +331,8 @@
 				641D83F8196CB874001700EC /* OCDeviceScanner.m */,
 				6472867B1974AC1800DE0A0A /* OCHeartbeatChannel.h */,
 				6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */,
+				647286961974C3FC00DE0A0A /* OCReceiverControlChannel.h */,
+				647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */,
 				641D83D9196CB592001700EC /* OpenCast.h */,
 				641D83DA196CB592001700EC /* OpenCast.m */,
 				641D83D3196CB592001700EC /* Supporting Files */,
@@ -497,6 +503,7 @@
 				6472865C197223DA00DE0A0A /* type_traits.h in Headers */,
 				64728643197223DA00DE0A0A /* atomicops_internals_arm_qnx.h in Headers */,
 				64728671197223DA00DE0A0A /* wire_format_lite_inl.h in Headers */,
+				647286981974C3FC00DE0A0A /* OCReceiverControlChannel.h in Headers */,
 				6472867D1974AC1800DE0A0A /* OCHeartbeatChannel.h in Headers */,
 				6472863C197223DA00DE0A0A /* reflection_ops.h in Headers */,
 				6472861D197223DA00DE0A0A /* dynamic_message.h in Headers */,
@@ -679,6 +686,7 @@
 				64728656197223DA00DE0A0A /* structurally_valid.cc in Sources */,
 				6472863F197223DA00DE0A0A /* service.cc in Sources */,
 				6472866D197223DA00DE0A0A /* wire_format.cc in Sources */,
+				647286991974C3FC00DE0A0A /* OCReceiverControlChannel.m in Sources */,
 				64728622197223DA00DE0A0A /* generated_message_reflection.cc in Sources */,
 				6472863D197223DA00DE0A0A /* repeated_field.cc in Sources */,
 				64BC9A5E1970D7AF003968FF /* OCCastChannel.m in Sources */,
