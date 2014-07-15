@@ -45,11 +45,11 @@
 }
 
 - (void)didConnect {
-    // TODO
+    // Should be implemented by subclasses
 }
 
 - (void)didDisconnect {
-    // TODO
+    // Should be implemented by subclasses
 }
 
 @end
