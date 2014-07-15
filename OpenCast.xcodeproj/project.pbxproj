@@ -102,6 +102,8 @@
 		647286731972243A00DE0A0A /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 647286721972243A00DE0A0A /* config.h */; };
 		647286761972249900DE0A0A /* cast_channel.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 647286741972249900DE0A0A /* cast_channel.pb.h */; };
 		64728679197224C700DE0A0A /* cast_channel.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 64728678197224C700DE0A0A /* cast_channel.pb.cc */; };
+		6472867D1974AC1800DE0A0A /* OCHeartbeatChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472867B1974AC1800DE0A0A /* OCHeartbeatChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6472867E1974AC1800DE0A0A /* OCHeartbeatChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */; };
 		647286811974B0F900DE0A0A /* OCConnectionChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472867F1974B0F900DE0A0A /* OCConnectionChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		647286821974B0F900DE0A0A /* OCConnectionChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 647286801974B0F900DE0A0A /* OCConnectionChannel.m */; };
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -228,6 +230,8 @@
 		647286721972243A00DE0A0A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		647286741972249900DE0A0A /* cast_channel.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cast_channel.pb.h; sourceTree = "<group>"; };
 		64728678197224C700DE0A0A /* cast_channel.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cast_channel.pb.cc; sourceTree = "<group>"; };
+		6472867B1974AC1800DE0A0A /* OCHeartbeatChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHeartbeatChannel.h; sourceTree = "<group>"; };
+		6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCHeartbeatChannel.m; sourceTree = "<group>"; };
 		6472867F1974B0F900DE0A0A /* OCConnectionChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConnectionChannel.h; sourceTree = "<group>"; };
 		647286801974B0F900DE0A0A /* OCConnectionChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCConnectionChannel.m; sourceTree = "<group>"; };
 		64BC9946196CCBBA003968FF /* OCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDevice.h; sourceTree = "<group>"; };
@@ -321,6 +325,8 @@
 				64BC9965196E0266003968FF /* OCDeviceManager.mm */,
 				641D83F7196CB874001700EC /* OCDeviceScanner.h */,
 				641D83F8196CB874001700EC /* OCDeviceScanner.m */,
+				6472867B1974AC1800DE0A0A /* OCHeartbeatChannel.h */,
+				6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */,
 				641D83D9196CB592001700EC /* OpenCast.h */,
 				641D83DA196CB592001700EC /* OpenCast.m */,
 				641D83D3196CB592001700EC /* Supporting Files */,
@@ -491,6 +497,7 @@
 				6472865C197223DA00DE0A0A /* type_traits.h in Headers */,
 				64728643197223DA00DE0A0A /* atomicops_internals_arm_qnx.h in Headers */,
 				64728671197223DA00DE0A0A /* wire_format_lite_inl.h in Headers */,
+				6472867D1974AC1800DE0A0A /* OCHeartbeatChannel.h in Headers */,
 				6472863C197223DA00DE0A0A /* reflection_ops.h in Headers */,
 				6472861D197223DA00DE0A0A /* dynamic_message.h in Headers */,
 				64728625197223DA00DE0A0A /* generated_message_util.h in Headers */,
@@ -643,6 +650,7 @@
 			files = (
 				6472861E197223DA00DE0A0A /* extension_set.cc in Sources */,
 				64728659197223DA00DE0A0A /* substitute.cc in Sources */,
+				6472867E1974AC1800DE0A0A /* OCHeartbeatChannel.m in Sources */,
 				64728624197223DA00DE0A0A /* generated_message_util.cc in Sources */,
 				64728615197223DA00DE0A0A /* descriptor.cc in Sources */,
 				64728657197223DA00DE0A0A /* strutil.cc in Sources */,
