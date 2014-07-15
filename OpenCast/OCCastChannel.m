@@ -11,6 +11,7 @@
 
 @interface OCCastChannel ()
 @property (weak, nonatomic) OCDeviceManager* deviceManager;
+@property (assign, nonatomic) NSInteger nextRequestID;
 @end
 
 @interface OCDeviceManager ()
@@ -35,13 +36,11 @@
 }
 
 - (NSInteger)generateRequestID {
-    // TODO
-    return 0;
+    return self.nextRequestID++;
 }
 
 - (NSNumber *)generateRequestNumber {
-    // TODO
-    return 0;
+    return @([self generateRequestID]);
 }
 
 - (void)didConnect {
