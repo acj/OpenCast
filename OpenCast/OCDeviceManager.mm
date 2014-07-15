@@ -229,6 +229,7 @@ using namespace extensions::api::cast_channel;
     } else {
         self.channels[channel.protocolNamespace] = channel;
         channel.deviceManager = self;
+        [channel didConnect];
         return YES;
     }
 }
@@ -236,6 +237,7 @@ using namespace extensions::api::cast_channel;
 - (BOOL)removeChannel:(OCCastChannel *)channel {
     if ([self.channels objectForKey:channel.protocolNamespace]) {
         [self.channels removeObjectForKey:channel.protocolNamespace];
+        [channel didDisconnect];
         return YES;
     } else {
         return NO;
