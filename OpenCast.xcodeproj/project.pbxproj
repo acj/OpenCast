@@ -102,6 +102,8 @@
 		647286731972243A00DE0A0A /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 647286721972243A00DE0A0A /* config.h */; };
 		647286761972249900DE0A0A /* cast_channel.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 647286741972249900DE0A0A /* cast_channel.pb.h */; };
 		64728679197224C700DE0A0A /* cast_channel.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 64728678197224C700DE0A0A /* cast_channel.pb.cc */; };
+		647286811974B0F900DE0A0A /* OCConnectionChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472867F1974B0F900DE0A0A /* OCConnectionChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		647286821974B0F900DE0A0A /* OCConnectionChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 647286801974B0F900DE0A0A /* OCConnectionChannel.m */; };
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
 		64BC995C196CD585003968FF /* OpenCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83D9196CB592001700EC /* OpenCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -226,6 +228,8 @@
 		647286721972243A00DE0A0A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		647286741972249900DE0A0A /* cast_channel.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cast_channel.pb.h; sourceTree = "<group>"; };
 		64728678197224C700DE0A0A /* cast_channel.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cast_channel.pb.cc; sourceTree = "<group>"; };
+		6472867F1974B0F900DE0A0A /* OCConnectionChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConnectionChannel.h; sourceTree = "<group>"; };
+		647286801974B0F900DE0A0A /* OCConnectionChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCConnectionChannel.m; sourceTree = "<group>"; };
 		64BC9946196CCBBA003968FF /* OCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDevice.h; sourceTree = "<group>"; };
 		64BC9947196CCBBA003968FF /* OCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDevice.m; sourceTree = "<group>"; };
 		64BC9964196E0266003968FF /* OCDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDeviceManager.h; sourceTree = "<group>"; };
@@ -307,6 +311,8 @@
 				647286741972249900DE0A0A /* cast_channel.pb.h */,
 				64BC9A5B1970D7AF003968FF /* OCCastChannel.h */,
 				64BC9A5C1970D7AF003968FF /* OCCastChannel.m */,
+				6472867F1974B0F900DE0A0A /* OCConnectionChannel.h */,
+				647286801974B0F900DE0A0A /* OCConnectionChannel.m */,
 				64BC9A631971A9DC003968FF /* OCConstants.h */,
 				64BC9A641971A9DC003968FF /* OCConstants.m */,
 				64BC9946196CCBBA003968FF /* OCDevice.h */,
@@ -479,6 +485,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647286811974B0F900DE0A0A /* OCConnectionChannel.h in Headers */,
 				64728652197223DA00DE0A0A /* platform_macros.h in Headers */,
 				6472862B197223DA00DE0A0A /* package_info.h in Headers */,
 				6472865C197223DA00DE0A0A /* type_traits.h in Headers */,
@@ -651,6 +658,7 @@
 				64728626197223DA00DE0A0A /* coded_stream.cc in Sources */,
 				64728629197223DA00DE0A0A /* gzip_stream.cc in Sources */,
 				64728638197223DA00DE0A0A /* message_lite.cc in Sources */,
+				647286821974B0F900DE0A0A /* OCConnectionChannel.m in Sources */,
 				64728617197223DA00DE0A0A /* descriptor.pb.cc in Sources */,
 				64728648197223DA00DE0A0A /* atomicops_internals_x86_gcc.cc in Sources */,
 				6472866F197223DA00DE0A0A /* wire_format_lite.cc in Sources */,
