@@ -10,13 +10,13 @@
 
 @implementation OCConstants
 
-NSString* OpenCastNamespaceConnection = @"urn:x-cast:com.google.cast.tp.connection";
-NSString* OpenCastNamespaceHeartbeat = @"urn:x-cast:com.google.cast.tp.heartbeat";
-NSString* OpenCastNamespaceReceiver = @"urn:x-cast:com.google.cast.receiver";
+NSString* const OpenCastNamespaceConnection = @"urn:x-cast:com.google.cast.tp.connection";
+NSString* const OpenCastNamespaceHeartbeat = @"urn:x-cast:com.google.cast.tp.heartbeat";
+NSString* const OpenCastNamespaceReceiver = @"urn:x-cast:com.google.cast.receiver";
 
-NSString* SourceIdDefault = @"sender-0";
-NSString* DestinationIdDefault = @"receiver-0";
+NSString* const SourceIdDefault = @"sender-0";
+NSString* const DestinationIdDefault = @"receiver-0";
 
-NSString* CastAppIdDefaultMediaReceiver = @"CC1AD845";
+NSString* const CastAppIdDefaultMediaReceiver = @"CC1AD845";
 
 @end

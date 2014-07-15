@@ -10,13 +10,13 @@
 
 @interface OCConstants : NSObject
 
-extern NSString* OpenCastNamespaceConnection;
-extern NSString* OpenCastNamespaceHeartbeat;
-extern NSString* OpenCastNamespaceReceiver;
+extern NSString* const OpenCastNamespaceConnection;
+extern NSString* const OpenCastNamespaceHeartbeat;
+extern NSString* const OpenCastNamespaceReceiver;
 
-extern NSString* SourceIdDefault;
-extern NSString* DestinationIdDefault;
+extern NSString* const SourceIdDefault;
+extern NSString* const DestinationIdDefault;
 
-extern NSString* CastAppIdDefaultMediaReceiver;
+extern NSString* const CastAppIdDefaultMediaReceiver;
 
 @end
