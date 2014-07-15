@@ -238,6 +238,7 @@ using namespace extensions::api::cast_channel;
     if ([self.channels objectForKey:channel.protocolNamespace]) {
         [self.channels removeObjectForKey:channel.protocolNamespace];
         [channel didDisconnect];
+        channel.deviceManager = nil;
         return YES;
     } else {
         return NO;
