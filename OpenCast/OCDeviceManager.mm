@@ -9,9 +9,11 @@
 #import "cast_channel.pb.h"
 #import "coded_stream.h"
 #import "OCCastChannel.h"
+#import "OCConnectionChannel.h"
 #import "OCConstants.h"
 #import "OCDevice.h"
 #import "OCDeviceManager.h"
+#import "OCHeartbeatChannel.h"
 
 using namespace google::protobuf::io;
 using namespace extensions::api::cast_channel;
@@ -293,6 +295,13 @@ using namespace extensions::api::cast_channel;
 - (BOOL)requestDeviceStatus {
     // TODO
     return NO;
+}
+
+#pragma mark Private
+
+- (void)prepareBaseChannels {
+    [self addChannel:[OCConnectionChannel init]];
+    [self addChannel:[OCHeartbeatChannel init]];
 }
 
 @end
