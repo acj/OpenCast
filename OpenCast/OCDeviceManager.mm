@@ -201,6 +201,7 @@ using namespace extensions::api::cast_channel;
             NSLog(@"SpaceAvailable");
             if (!self.isConnected && self.readStreamIsConnected && self.writeStreamIsConnected) {
                 _isConnected = YES;
+                [self prepareBaseChannels];
                 [self.delegate deviceManagerDidConnect:self];
             }
             
