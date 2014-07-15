@@ -13,6 +13,8 @@
 extern NSString* const OpenCastNamespaceConnection;
 extern NSString* const OpenCastNamespaceHeartbeat;
 extern NSString* const OpenCastNamespaceReceiver;
+extern NSString* const OpenCastNamespaceMedia;
+extern NSString* const OpenCastNamespaceDeviceAuth;
 
 extern NSString* const SourceIdDefault;
 extern NSString* const DestinationIdDefault;
