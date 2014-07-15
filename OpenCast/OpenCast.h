@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 
 #import "OCCastChannel.h"
+#import "OCConnectionChannel.h"
 #import "OCConstants.h"
 #import "OCDevice.h"
 #import "OCDeviceManager.h"
 #import "OCDeviceScanner.h"
+#import "OCHeartbeatChannel.h"
+#import "OCReceiverControlChannel.h"
 
 @interface OpenCast : NSObject
 
