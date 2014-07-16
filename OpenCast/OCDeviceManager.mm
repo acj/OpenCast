@@ -281,13 +281,14 @@ using namespace extensions::api::cast_channel;
 }
 
 - (BOOL)stopApplication {
-    // TODO
-    return NO;
+    NSDictionary* messageDict = @{ @"type" : @"STOP" };
+    return [self.channels[OpenCastNamespaceReceiver] sendTextMessage:[messageDict JSONString]];
 }
 
 - (BOOL)stopApplicationWithSessionID:(NSString *)sessionID {
-    // TODO
-    return NO;
+    NSDictionary* messageDict = @{ @"type" : @"STOP",
+                                   @"sessionId" : sessionID };
+    return [self.channels[OpenCastNamespaceReceiver] sendTextMessage:[messageDict JSONString]];
 }
 
 #pragma mark Device status
