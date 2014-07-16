@@ -27,8 +27,7 @@
 }
 
 - (void)didReceiveTextMessage:(NSString*)message {
-    // TODO
-    NSLog(@"didReceiveTextMessage");
+    // Should be implemented by subclasses
 }
 
 - (BOOL)sendTextMessage:(NSString *)message {
