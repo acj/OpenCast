@@ -294,13 +294,15 @@ using namespace extensions::api::cast_channel;
 #pragma mark Device status
 
 - (BOOL)setVolume:(float)volume {
-    // TODO
-    return NO;
+    NSDictionary* messageDict = @{ @"type" : @"SET_VOLUME",
+                                   @"volume" : @{ @"level" : @(volume) } };
+    return [self.channels[OpenCastNamespaceReceiver] sendTextMessage:[messageDict JSONString]];
 }
 
 - (BOOL)setMuted:(BOOL)muted {
-    // TODO
-    return NO;
+    NSDictionary* messageDict = @{ @"type" : @"SET_VOLUME",
+                                   @"volume" : @{ @"muted" : @(muted) } };
+    return [self.channels[OpenCastNamespaceReceiver] sendTextMessage:[messageDict JSONString]];
 }
 
 - (BOOL)requestDeviceStatus {
