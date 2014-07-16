@@ -306,8 +306,8 @@ using namespace extensions::api::cast_channel;
 }
 
 - (BOOL)requestDeviceStatus {
-    // TODO
-    return NO;
+    NSDictionary* messageDict = @{ @"type" : @"GET_STATUS" };
+    return [self.channels[OpenCastNamespaceReceiver] sendTextMessage:[messageDict JSONString]];
 }
 
 #pragma mark Private
