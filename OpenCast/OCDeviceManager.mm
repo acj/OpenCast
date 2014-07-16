@@ -8,6 +8,7 @@
 
 #import "cast_channel.pb.h"
 #import "coded_stream.h"
+#import "JSONKit.h"
 #import "OCCastChannel.h"
 #import "OCConnectionChannel.h"
 #import "OCConstants.h"
@@ -249,14 +250,13 @@ using namespace extensions::api::cast_channel;
 #pragma mark Applications
 
 - (BOOL)launchApplication:(NSString *)applicationID {
-    for (OCCastChannel* channel in self.channels) {
-        if ([channel.protocolNamespace isEqualToString:OpenCastNamespaceReceiver]) {
-            NSString* const message = [NSString stringWithFormat:@"{\"type\":\"LAUNCH\",\"appId\":\"%@\",\"requestId\":%ld}", applicationID, (long)[channel generateRequestID]];
-            return [channel sendTextMessage:message];
-        }
-    }
+    OCReceiverControlChannel* channel = self.channels[OpenCastNamespaceReceiver];
     
-    return NO;
+    NSDictionary* messageDict = @{ @"type" : @"LAUNCH",
+                                   @"appId" : applicationID,
+                                   @"requestId" : [channel generateRequestNumber] };
+    
+    return [channel sendTextMessage:[messageDict JSONString]];
 }
 
 - (BOOL)launchApplication:(NSString *)applicationID
