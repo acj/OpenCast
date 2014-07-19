@@ -261,13 +261,11 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
 #pragma mark Applications
 
 - (BOOL)launchApplication:(NSString *)applicationID {
-    OCReceiverControlChannel* channel = self.channels[OpenCastNamespaceReceiver];
-    
     NSDictionary* messageDict = @{ @"type" : @"LAUNCH",
                                    @"appId" : applicationID,
-                                   @"requestId" : [channel generateRequestNumber] };
+                                   @"requestId" : [self.channels[OpenCastNamespaceHeartbeat] generateRequestNumber] };
     
-    return [channel sendTextMessage:[messageDict JSONString]];
+    return [self.channels[OpenCastNamespaceReceiver] sendTextMessage:[messageDict JSONString]];
 }
 
 - (BOOL)launchApplication:(NSString *)applicationID
