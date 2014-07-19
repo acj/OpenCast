@@ -10,7 +10,6 @@
 #import "coded_stream.h"
 #import "JSONKit.h"
 #import "OCCastChannel.h"
-#import "OCConnectionChannel.h"
 #import "OCConstants.h"
 #import "OCDevice.h"
 #import "OCDeviceManager.h"
@@ -318,7 +317,6 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
 #pragma mark Private
 
 - (void)prepareBaseChannels {
-    [self addChannel:[OCConnectionChannel init]];
     [self addChannel:[OCHeartbeatChannel init]];
 }
 

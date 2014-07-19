@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 #import "OCCastChannel.h"
-#import "OCConnectionChannel.h"
 #import "OCConstants.h"
 #import "OCDevice.h"
 #import "OCDeviceManager.h"
