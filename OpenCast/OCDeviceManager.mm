@@ -86,12 +86,19 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
 }
 
 - (BOOL)sendTextMessage:(NSString*)textMessage namespace:(NSString*)protocolNamespace {
+    return [self sendTextMessage:textMessage namespace:protocolNamespace sourceId:SourceIdDefault destinationId:DestinationIdDefault];
+}
+
+- (BOOL)sendTextMessage:(NSString*)textMessage
+              namespace:(NSString*)protocolNamespace
+               sourceId:(NSString*)sourceId
+          destinationId:(NSString*)destinationId {
     // TODO: Ensure that send buffer has available space
     if (self.isConnected) {
         CastMessage* message = new CastMessage();
         message->set_protocol_version(CastMessage_ProtocolVersion_CASTV2_1_0);
-        message->set_source_id([SourceIdDefault cStringUsingEncoding:[NSString defaultCStringEncoding]]);
-        message->set_destination_id([DestinationIdDefault cStringUsingEncoding:[NSString defaultCStringEncoding]]);
+        message->set_source_id([sourceId cStringUsingEncoding:[NSString defaultCStringEncoding]]);
+        message->set_destination_id([destinationId cStringUsingEncoding:[NSString defaultCStringEncoding]]);
         message->set_namespace_([protocolNamespace cStringUsingEncoding:[NSString defaultCStringEncoding]]);
         message->set_payload_type(CastMessage_PayloadType_STRING);
         message->set_payload_utf8([textMessage cStringUsingEncoding:NSUTF8StringEncoding]);
