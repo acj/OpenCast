@@ -108,6 +108,8 @@
 		647286991974C3FC00DE0A0A /* OCReceiverControlChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */; };
 		647287911975FB0B00DE0A0A /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472878F1975FB0B00DE0A0A /* JSONKit.h */; };
 		647287921975FB0B00DE0A0A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 647287901975FB0B00DE0A0A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6472879919760F6C00DE0A0A /* OCMediaInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879719760F6C00DE0A0A /* OCMediaInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6472879A19760F6C00DE0A0A /* OCMediaInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472879819760F6C00DE0A0A /* OCMediaInformation.m */; };
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
 		64BC995C196CD585003968FF /* OpenCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83D9196CB592001700EC /* OpenCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -238,6 +240,8 @@
 		647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCReceiverControlChannel.m; sourceTree = "<group>"; };
 		6472878F1975FB0B00DE0A0A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		647287901975FB0B00DE0A0A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		6472879719760F6C00DE0A0A /* OCMediaInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMediaInformation.h; sourceTree = "<group>"; };
+		6472879819760F6C00DE0A0A /* OCMediaInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMediaInformation.m; sourceTree = "<group>"; };
 		64BC9946196CCBBA003968FF /* OCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDevice.h; sourceTree = "<group>"; };
 		64BC9947196CCBBA003968FF /* OCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDevice.m; sourceTree = "<group>"; };
 		64BC9964196E0266003968FF /* OCDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDeviceManager.h; sourceTree = "<group>"; };
@@ -331,6 +335,8 @@
 				6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */,
 				647286961974C3FC00DE0A0A /* OCReceiverControlChannel.h */,
 				647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */,
+				6472879719760F6C00DE0A0A /* OCMediaInformation.h */,
+				6472879819760F6C00DE0A0A /* OCMediaInformation.m */,
 				641D83D9196CB592001700EC /* OpenCast.h */,
 				641D83DA196CB592001700EC /* OpenCast.m */,
 				641D83D3196CB592001700EC /* Supporting Files */,
@@ -506,6 +512,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6472879919760F6C00DE0A0A /* OCMediaInformation.h in Headers */,
 				64728652197223DA00DE0A0A /* platform_macros.h in Headers */,
 				6472862B197223DA00DE0A0A /* package_info.h in Headers */,
 				6472865C197223DA00DE0A0A /* type_traits.h in Headers */,
@@ -684,6 +691,7 @@
 				64728638197223DA00DE0A0A /* message_lite.cc in Sources */,
 				647287921975FB0B00DE0A0A /* JSONKit.m in Sources */,
 				64728617197223DA00DE0A0A /* descriptor.pb.cc in Sources */,
+				6472879A19760F6C00DE0A0A /* OCMediaInformation.m in Sources */,
 				64728648197223DA00DE0A0A /* atomicops_internals_x86_gcc.cc in Sources */,
 				6472866F197223DA00DE0A0A /* wire_format_lite.cc in Sources */,
 				64728630197223DA00DE0A0A /* zero_copy_stream.cc in Sources */,

@@ -15,6 +15,7 @@
 #import "OCDeviceScanner.h"
 #import "OCHeartbeatChannel.h"
 #import "OCReceiverControlChannel.h"
+#import "OCMediaInformation.h"
 
 @interface OpenCast : NSObject
 
