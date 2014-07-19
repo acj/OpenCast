@@ -19,6 +19,9 @@
 using namespace google::protobuf::io;
 using namespace extensions::api::cast_channel;
 
+NSString* const TextMessageConnect = @"{\"type\":\"CONNECT\"}";
+NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
+
 @interface OCDeviceManager () <NSStreamDelegate>
 @property (strong, nonatomic) NSMutableDictionary* channels;
 
