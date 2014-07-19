@@ -3,11 +3,12 @@
 //  OpenCast
 
 #import "JSONKit.h"
-#import "OCReceiverController.h"
+#import "OCDefaultMediaReceiverController.h"
 
-@interface OCReceiverController ()
+@interface OCDefaultMediaReceiverController ()
 @property (strong, nonatomic) OCMediaControlChannel* mediaChannel;
 @property (assign, nonatomic) BOOL isCasting;
+@property (strong, nonatomic) NSString* senderId;
 @property (strong, nonatomic) NSString* transportId;
 @end
 
@@ -24,10 +25,20 @@
                destinationId:(NSString*)destinationId;
 @end
 
-@implementation OCReceiverController
+@implementation OCDefaultMediaReceiverController
 
 + (id)init {
-    return [[OCReceiverController alloc] initWithNamespace:OpenCastNamespaceReceiver];
+    return [[OCDefaultMediaReceiverController alloc] initWithNamespace:OpenCastNamespaceReceiver];
+}
+
+- (id)initWithNamespace:(NSString *)protocolNamespace {
+    self = [super initWithNamespace:protocolNamespace];
+    
+    if (self) {
+        self.senderId = [self generateSenderId];
+    }
+    
+    return self;
 }
 
 - (void)didReceiveTextMessage:(NSString *)message
@@ -50,11 +61,10 @@
     
     if (!self.isCasting && self.transportId && readyToCast) {
         // Connect to the application
-        // TODO: Generate the sourceId
-        [self.deviceManager sendTextMessage:@"{\"type\":\"CONNECT\"}" namespace:OpenCastNamespaceConnection sourceId:@"client-1234" destinationId:self.transportId];
+        [self.deviceManager sendTextMessage:@"{\"type\":\"CONNECT\"}" namespace:OpenCastNamespaceConnection sourceId:self.senderId destinationId:self.transportId];
         
         self.mediaChannel = [[OCMediaControlChannel alloc] init];
-        [self.mediaChannel setSourceId:@"client-1234"];
+        [self.mediaChannel setSourceId:self.senderId];
         [self.mediaChannel setDestinationId:self.transportId];
         [self.deviceManager addChannel:self.mediaChannel];
         
@@ -70,6 +80,12 @@
         
         self.isCasting = YES;
     }
+}
+
+#pragma mark - Private
+
+- (NSString*)generateSenderId {
+    return [NSString stringWithFormat:@"sender-%d", arc4random() % 99999];
 }
 
 @end

@@ -4,7 +4,7 @@
 
 #import <OpenCast/OpenCast.h>
 
-@interface OCReceiverController : OCCastChannel
+@interface OCDefaultMediaReceiverController : OCCastChannel
 
 + (id)init;
 
