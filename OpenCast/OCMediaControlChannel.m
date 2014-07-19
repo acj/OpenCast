@@ -160,7 +160,16 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
 }
 
 - (NSInteger)setStreamMuted:(BOOL)muted customData:(id)customData {
+    // TODO: Use customData somehow
     const NSInteger requestId = [self generateRequestID];
+    
+    NSDictionary* volumeDict = @{@"type" : @"SET_VOLUME",
+                                 @"volume" : @{ @"muted" : @(muted) } };
+    
+    [self.deviceManager sendTextMessage:[volumeDict JSONString]
+                              namespace:OpenCastNamespaceReceiver
+                               sourceId:self.sourceId
+                          destinationId:DestinationIdDefault];
     
     return requestId;
 }
