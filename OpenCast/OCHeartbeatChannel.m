@@ -14,8 +14,6 @@ NSString* const TextMessagePong = @"{\"type\":\"PONG\"}";
 }
 
 - (void)didReceiveTextMessage:(NSString *)message {
-    NSLog(@"Heartbeat received message: %@", message);
-    
     if ([message rangeOfString:@"PING"].location != NSNotFound) {
         [self sendTextMessage:TextMessagePong];
     }
