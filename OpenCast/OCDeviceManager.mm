@@ -166,7 +166,8 @@ using namespace extensions::api::cast_channel;
             
             if (readState == WAITING_FOR_MESSAGE) {
                 if ([self.rawInputStream hasBytesAvailable]) {
-                    bytesInBuffer += [self.rawInputStream read:(buffer + bytesInBuffer) maxLength:messageLength];
+                    bytesInBuffer += [self.rawInputStream read:(buffer + bytesInBuffer)
+                                                     maxLength:(messageLength - (bytesInBuffer - HEADER_SIZE))];
                 }
             }
             
