@@ -111,7 +111,7 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
         [self.rawOutputStream write:(const uint8_t*)&length maxLength:sizeof(length)];
         [self.rawOutputStream write:(const unsigned char*)[messageData bytes] maxLength:[messageData length]];
         
-        NSLog(@"Send [%@]: %@", [NSString stringWithCString:message->namespace_().c_str() encoding:NSUTF8StringEncoding], [NSString stringWithCString:message->payload_utf8().c_str() encoding:NSUTF8StringEncoding]);
+        NSLog(@"Send [%@:%@:%@]: %@", [NSString stringWithCString:message->source_id().c_str() encoding:NSUTF8StringEncoding], [NSString stringWithCString:message->destination_id().c_str() encoding:NSUTF8StringEncoding], [NSString stringWithCString:message->namespace_().c_str() encoding:NSUTF8StringEncoding], [NSString stringWithCString:message->payload_utf8().c_str() encoding:NSUTF8StringEncoding]);
         
         return YES;
     } else {
