@@ -108,6 +108,8 @@
 		647286991974C3FC00DE0A0A /* OCReceiverControlChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */; };
 		647287911975FB0B00DE0A0A /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472878F1975FB0B00DE0A0A /* JSONKit.h */; };
 		647287921975FB0B00DE0A0A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 647287901975FB0B00DE0A0A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6472879519760BD200DE0A0A /* OCMediaControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879319760BD200DE0A0A /* OCMediaControlChannel.h */; };
+		6472879619760BD200DE0A0A /* OCMediaControlChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472879419760BD200DE0A0A /* OCMediaControlChannel.m */; };
 		6472879919760F6C00DE0A0A /* OCMediaInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879719760F6C00DE0A0A /* OCMediaInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6472879A19760F6C00DE0A0A /* OCMediaInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472879819760F6C00DE0A0A /* OCMediaInformation.m */; };
 		6472879C197615FF00DE0A0A /* OCMediaMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879B197615FF00DE0A0A /* OCMediaMetadata.h */; };
@@ -242,6 +244,8 @@
 		647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCReceiverControlChannel.m; sourceTree = "<group>"; };
 		6472878F1975FB0B00DE0A0A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		647287901975FB0B00DE0A0A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		6472879319760BD200DE0A0A /* OCMediaControlChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMediaControlChannel.h; sourceTree = "<group>"; };
+		6472879419760BD200DE0A0A /* OCMediaControlChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMediaControlChannel.m; sourceTree = "<group>"; };
 		6472879719760F6C00DE0A0A /* OCMediaInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMediaInformation.h; sourceTree = "<group>"; };
 		6472879819760F6C00DE0A0A /* OCMediaInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMediaInformation.m; sourceTree = "<group>"; };
 		6472879B197615FF00DE0A0A /* OCMediaMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMediaMetadata.h; sourceTree = "<group>"; };
@@ -339,6 +343,8 @@
 				6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */,
 				647286961974C3FC00DE0A0A /* OCReceiverControlChannel.h */,
 				647286971974C3FC00DE0A0A /* OCReceiverControlChannel.m */,
+				6472879319760BD200DE0A0A /* OCMediaControlChannel.h */,
+				6472879419760BD200DE0A0A /* OCMediaControlChannel.m */,
 				6472879719760F6C00DE0A0A /* OCMediaInformation.h */,
 				6472879819760F6C00DE0A0A /* OCMediaInformation.m */,
 				6472879B197615FF00DE0A0A /* OCMediaMetadata.h */,
@@ -527,6 +533,7 @@
 				647286981974C3FC00DE0A0A /* OCReceiverControlChannel.h in Headers */,
 				6472879C197615FF00DE0A0A /* OCMediaMetadata.h in Headers */,
 				6472867D1974AC1800DE0A0A /* OCHeartbeatChannel.h in Headers */,
+				6472879519760BD200DE0A0A /* OCMediaControlChannel.h in Headers */,
 				6472863C197223DA00DE0A0A /* reflection_ops.h in Headers */,
 				6472861D197223DA00DE0A0A /* dynamic_message.h in Headers */,
 				64728625197223DA00DE0A0A /* generated_message_util.h in Headers */,
@@ -697,6 +704,7 @@
 				64728626197223DA00DE0A0A /* coded_stream.cc in Sources */,
 				64728629197223DA00DE0A0A /* gzip_stream.cc in Sources */,
 				64728638197223DA00DE0A0A /* message_lite.cc in Sources */,
+				6472879619760BD200DE0A0A /* OCMediaControlChannel.m in Sources */,
 				647287921975FB0B00DE0A0A /* JSONKit.m in Sources */,
 				64728617197223DA00DE0A0A /* descriptor.pb.cc in Sources */,
 				6472879A19760F6C00DE0A0A /* OCMediaInformation.m in Sources */,
