@@ -137,13 +137,20 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
 }
 
 - (NSInteger)setStreamVolume:(float)volume {
-    const NSInteger requestId = [self generateRequestID];
-    
-    return requestId;
+    return [self setStreamVolume:volume customData:nil];
 }
 
 - (NSInteger)setStreamVolume:(float)volume customData:(id)customData {
+    // TODO: Use customData somehow
     const NSInteger requestId = [self generateRequestID];
+    
+    NSDictionary* volumeDict = @{@"type" : @"SET_VOLUME",
+                                 @"volume" : @{ @"level" : @(volume) } };
+    
+    [self.deviceManager sendTextMessage:[volumeDict JSONString]
+                              namespace:OpenCastNamespaceReceiver
+                               sourceId:self.sourceId
+                          destinationId:DestinationIdDefault];
     
     return requestId;
 }
