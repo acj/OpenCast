@@ -207,6 +207,7 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
             if (!self.isConnected && self.readStreamIsConnected && self.writeStreamIsConnected) {
                 _isConnected = YES;
                 [self prepareBaseChannels];
+                [self sendTextMessage:TextMessageConnect namespace:OpenCastNamespaceConnection];
                 [self.delegate deviceManagerDidConnect:self];
             }
             
