@@ -1,10 +1,6 @@
 //
 //  OCDeviceManager.m
 //  OpenCast
-//
-//  Created by Adam Jensen on 7/9/14.
-//  Copyright (c) 2014 Adam Jensen. All rights reserved.
-//
 
 #import "cast_channel.pb.h"
 #import "coded_stream.h"

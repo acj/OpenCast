@@ -1,10 +1,6 @@
 //
 //  OCConstants.m
 //  OpenCast
-//
-//  Created by Adam Jensen on 7/12/14.
-//  Copyright (c) 2014 Adam Jensen. All rights reserved.
-//
 
 #import "OCConstants.h"
 

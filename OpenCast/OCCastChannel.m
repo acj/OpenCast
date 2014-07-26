@@ -1,10 +1,6 @@
 //
 //  OCCastChannel.m
 //  OpenCast
-//
-//  Created by Adam Jensen on 7/11/14.
-//  Copyright (c) 2014 Adam Jensen. All rights reserved.
-//
 
 #import "OCCastChannel.h"
 #import "OCConstants.h"
