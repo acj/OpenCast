@@ -75,10 +75,6 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
               };
 }
 
-- (NSDictionary*)dictionaryFromMediaMetadata:(OCMediaMetadata*)metadata {
-    return @{ };
-}
-
 - (NSInteger)pause {
     const NSInteger requestId = [self generateRequestID];
     
