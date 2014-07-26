@@ -54,6 +54,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
 {
     NSDictionary* const dict = [message objectFromJSONString];
     NSArray* const statusArray = dict[@"status"];
+    const NSInteger requestId = [dict[@"requestId"] integerValue];
     const BOOL isMediaStatus = [dict[@"type"] isEqualToString:@"MEDIA_STATUS"];
     
     if ([dict count]) {
@@ -79,7 +80,6 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
         self.currentStreamPosition = [statusDict[@"currentTime"] doubleValue];
         self.supportedMediaCommands = [statusDict[@"supportedMediaCommands"] intValue];
         
-        const NSInteger requestId = [dict[@"requestId"] integerValue];
         NSString* const requestType = self.pendingRequests[[NSNumber numberWithLong:requestId]];
         NSLog(@"requestId: %ld", (long)requestId);
         if ([requestType isEqualToString:@"LOAD"]) {
@@ -89,6 +89,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
     
     if (isMediaStatus) {
         [self.delegate mediaControlChannelDidUpdateStatus:self];
+        [self.delegate mediaControlChannel:self requestDidCompleteWithID:requestId];
     }
 }
 
