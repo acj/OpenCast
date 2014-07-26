@@ -5,7 +5,7 @@
 #import "JSONKit.h"
 #import "OCDefaultMediaReceiverController.h"
 
-@interface OCDefaultMediaReceiverController ()
+@interface OCDefaultMediaReceiverController () <OCMediaControlChannelDelegate>
 @property (strong, nonatomic) OCMediaControlChannel* mediaChannel;
 @property (assign, nonatomic) BOOL isCasting;
 @property (strong, nonatomic) NSString* senderId;
@@ -36,14 +36,15 @@
     
     if (self) {
         self.senderId = [self generateSenderId];
+        
         self.mediaChannel = [[OCMediaControlChannel alloc] init];
+        self.mediaChannel.delegate = self;
     }
     
     return self;
 }
 
-- (void)didReceiveTextMessage:(NSString *)message
-{
+- (void)didReceiveTextMessage:(NSString *)message {
     NSDictionary* messageJson = [message objectFromJSONString];
     BOOL readyToCast = NO;
     
@@ -53,6 +54,7 @@
         
         if (appDict) {
             readyToCast = [appDict[@"statusText"] isEqualToString:@"Ready To Cast"];
+            self.isCasting = [appDict[@"statusText"] isEqualToString:@"Now Casting"];
             
             if (!appDict[@"isStandby"]) {
                 self.transportId = appDict[@"transportId"];
@@ -73,31 +75,27 @@
 #pragma mark - OCMediaControlChannelDelegate
 
 - (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel didCompleteLoadWithSessionID:(NSInteger)sessionID {
-    NSLog(@"mediaControlChannel:didCompleteLoadWithSessionId:");
-    [self.mediaChannel seekToTimeInterval:30];
-    [self.mediaChannel play];
-    
     self.isCasting = YES;
+    [self.mediaChannel play];
 }
 
 - (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel didFailToLoadMediaWithError:(NSError *)error {
-    
+    // TODO
 }
 
 - (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel requestDidCompleteWithID:(NSInteger)requestID {
-    
+    // Ignore
 }
 
 - (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel requestDidFailWithID:(NSInteger)requestID error:(NSError *)error {
-    
+    // Ignore
 }
 
 - (void)mediaControlChannelDidUpdateMetadata:(OCMediaControlChannel *)mediaControlChannel {
-    
+    // Ignore
 }
 
 - (void)mediaControlChannelDidUpdateStatus:(OCMediaControlChannel *)mediaControlChannel {
-    NSLog(@"mediaControlChannelDidUpdateStatus");
     if (!self.isCasting && mediaControlChannel) {
         
         NSString* url = @"http://commondatastorage.googleapis.com/gtv-videos-bucket/ED_1280.mp4";
@@ -108,9 +106,7 @@
                                                                    streamDuration:1000.f
                                                                        customData:nil];
         
-        [self.mediaChannel loadMedia:media autoplay:YES];
-        
-        self.isCasting = YES;
+        [self.mediaChannel loadMedia:media autoplay:NO];
     }
 }
 
