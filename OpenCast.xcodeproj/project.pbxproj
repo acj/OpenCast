@@ -114,6 +114,8 @@
 		6472879E1976164800DE0A0A /* OCMediaMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472879D1976164800DE0A0A /* OCMediaMetadata.m */; };
 		647287A3197B0B1700DE0A0A /* OCDefaultMediaReceiverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 647287A1197B0B1700DE0A0A /* OCDefaultMediaReceiverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		647287A4197B0B1700DE0A0A /* OCDefaultMediaReceiverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 647287A2197B0B1700DE0A0A /* OCDefaultMediaReceiverController.m */; };
+		64B245C219807D170097B094 /* OCMediaStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 64B245C019807D170097B094 /* OCMediaStatus.h */; };
+		64B245C319807D170097B094 /* OCMediaStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B245C119807D170097B094 /* OCMediaStatus.m */; };
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
 		64BC995C196CD585003968FF /* OpenCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83D9196CB592001700EC /* OpenCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -250,6 +252,8 @@
 		6472879D1976164800DE0A0A /* OCMediaMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMediaMetadata.m; sourceTree = "<group>"; };
 		647287A1197B0B1700DE0A0A /* OCDefaultMediaReceiverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDefaultMediaReceiverController.h; sourceTree = "<group>"; };
 		647287A2197B0B1700DE0A0A /* OCDefaultMediaReceiverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDefaultMediaReceiverController.m; sourceTree = "<group>"; };
+		64B245C019807D170097B094 /* OCMediaStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMediaStatus.h; sourceTree = "<group>"; };
+		64B245C119807D170097B094 /* OCMediaStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMediaStatus.m; sourceTree = "<group>"; };
 		64BC9946196CCBBA003968FF /* OCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDevice.h; sourceTree = "<group>"; };
 		64BC9947196CCBBA003968FF /* OCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDevice.m; sourceTree = "<group>"; };
 		64BC9964196E0266003968FF /* OCDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDeviceManager.h; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 				6472879819760F6C00DE0A0A /* OCMediaInformation.m */,
 				6472879B197615FF00DE0A0A /* OCMediaMetadata.h */,
 				6472879D1976164800DE0A0A /* OCMediaMetadata.m */,
+				64B245C019807D170097B094 /* OCMediaStatus.h */,
+				64B245C119807D170097B094 /* OCMediaStatus.m */,
 				641D83D9196CB592001700EC /* OpenCast.h */,
 				641D83DA196CB592001700EC /* OpenCast.m */,
 				641D83D3196CB592001700EC /* Supporting Files */,
@@ -557,6 +563,7 @@
 				64728651197223DA00DE0A0A /* once.h in Headers */,
 				64728644197223DA00DE0A0A /* atomicops_internals_atomicword_compat.h in Headers */,
 				64728621197223DA00DE0A0A /* generated_enum_reflection.h in Headers */,
+				64B245C219807D170097B094 /* OCMediaStatus.h in Headers */,
 				647286731972243A00DE0A0A /* config.h in Headers */,
 				6472863E197223DA00DE0A0A /* repeated_field.h in Headers */,
 				64728639197223DA00DE0A0A /* message_lite.h in Headers */,
@@ -723,6 +730,7 @@
 				64728620197223DA00DE0A0A /* extension_set_heavy.cc in Sources */,
 				64728632197223DA00DE0A0A /* zero_copy_stream_impl.cc in Sources */,
 				641D83DB196CB592001700EC /* OpenCast.m in Sources */,
+				64B245C319807D170097B094 /* OCMediaStatus.m in Sources */,
 				64728636197223DA00DE0A0A /* message.cc in Sources */,
 				64728656197223DA00DE0A0A /* structurally_valid.cc in Sources */,
 				6472863F197223DA00DE0A0A /* service.cc in Sources */,
