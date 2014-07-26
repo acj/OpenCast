@@ -106,7 +106,7 @@
 		6472867E1974AC1800DE0A0A /* OCHeartbeatChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */; };
 		647287911975FB0B00DE0A0A /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472878F1975FB0B00DE0A0A /* JSONKit.h */; };
 		647287921975FB0B00DE0A0A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 647287901975FB0B00DE0A0A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6472879519760BD200DE0A0A /* OCMediaControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879319760BD200DE0A0A /* OCMediaControlChannel.h */; };
+		6472879519760BD200DE0A0A /* OCMediaControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879319760BD200DE0A0A /* OCMediaControlChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6472879619760BD200DE0A0A /* OCMediaControlChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472879419760BD200DE0A0A /* OCMediaControlChannel.m */; };
 		6472879919760F6C00DE0A0A /* OCMediaInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879719760F6C00DE0A0A /* OCMediaInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6472879A19760F6C00DE0A0A /* OCMediaInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472879819760F6C00DE0A0A /* OCMediaInformation.m */; };
