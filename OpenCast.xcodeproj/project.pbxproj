@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		641D83CD196CB592001700EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83CC196CB592001700EC /* Cocoa.framework */; };
 		641D83D7196CB592001700EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 641D83D5196CB592001700EC /* InfoPlist.strings */; };
-		641D83DB196CB592001700EC /* OpenCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83DA196CB592001700EC /* OpenCast.m */; };
 		641D83E2196CB592001700EC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83E1196CB592001700EC /* XCTest.framework */; };
 		641D83E3196CB592001700EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83CC196CB592001700EC /* Cocoa.framework */; };
 		641D83E6196CB592001700EC /* OpenCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D83C9196CB592001700EC /* OpenCast.framework */; };
@@ -147,7 +146,6 @@
 		641D83D6196CB592001700EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		641D83D8196CB592001700EC /* OpenCast-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCast-Prefix.pch"; sourceTree = "<group>"; };
 		641D83D9196CB592001700EC /* OpenCast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCast.h; sourceTree = "<group>"; };
-		641D83DA196CB592001700EC /* OpenCast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCast.m; sourceTree = "<group>"; };
 		641D83E0196CB592001700EC /* OpenCastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenCastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		641D83E1196CB592001700EC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		641D83E9196CB592001700EC /* OpenCastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenCastTests-Info.plist"; sourceTree = "<group>"; };
@@ -355,7 +353,6 @@
 				64B245C019807D170097B094 /* OCMediaStatus.h */,
 				64B245C119807D170097B094 /* OCMediaStatus.m */,
 				641D83D9196CB592001700EC /* OpenCast.h */,
-				641D83DA196CB592001700EC /* OpenCast.m */,
 				641D83D3196CB592001700EC /* Supporting Files */,
 			);
 			path = OpenCast;
@@ -729,7 +726,6 @@
 				64BC9A661971A9DC003968FF /* OCConstants.m in Sources */,
 				64728620197223DA00DE0A0A /* extension_set_heavy.cc in Sources */,
 				64728632197223DA00DE0A0A /* zero_copy_stream_impl.cc in Sources */,
-				641D83DB196CB592001700EC /* OpenCast.m in Sources */,
 				64B245C319807D170097B094 /* OCMediaStatus.m in Sources */,
 				64728636197223DA00DE0A0A /* message.cc in Sources */,
 				64728656197223DA00DE0A0A /* structurally_valid.cc in Sources */,
