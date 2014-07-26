@@ -36,6 +36,7 @@
     
     if (self) {
         self.senderId = [self generateSenderId];
+        self.mediaChannel = [[OCMediaControlChannel alloc] init];
     }
     
     return self;
@@ -63,10 +64,41 @@
         // Connect to the application
         [self.deviceManager sendTextMessage:@"{\"type\":\"CONNECT\"}" namespace:OpenCastNamespaceConnection sourceId:self.senderId destinationId:self.transportId];
         
-        self.mediaChannel = [[OCMediaControlChannel alloc] init];
         [self.mediaChannel setSourceId:self.senderId];
         [self.mediaChannel setDestinationId:self.transportId];
         [self.deviceManager addChannel:self.mediaChannel];
+    }
+}
+
+#pragma mark - OCMediaControlChannelDelegate
+
+- (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel didCompleteLoadWithSessionID:(NSInteger)sessionID {
+    NSLog(@"mediaControlChannel:didCompleteLoadWithSessionId:");
+    [self.mediaChannel seekToTimeInterval:30];
+    [self.mediaChannel play];
+    
+    self.isCasting = YES;
+}
+
+- (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel didFailToLoadMediaWithError:(NSError *)error {
+    
+}
+
+- (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel requestDidCompleteWithID:(NSInteger)requestID {
+    
+}
+
+- (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel requestDidFailWithID:(NSInteger)requestID error:(NSError *)error {
+    
+}
+
+- (void)mediaControlChannelDidUpdateMetadata:(OCMediaControlChannel *)mediaControlChannel {
+    
+}
+
+- (void)mediaControlChannelDidUpdateStatus:(OCMediaControlChannel *)mediaControlChannel {
+    NSLog(@"mediaControlChannelDidUpdateStatus");
+    if (!self.isCasting && mediaControlChannel) {
         
         NSString* url = @"http://commondatastorage.googleapis.com/gtv-videos-bucket/ED_1280.mp4";
         OCMediaInformation* media = [[OCMediaInformation alloc] initWithContentID:url
