@@ -10,6 +10,8 @@
 #import "OCConstants.h"
 #import "OCDeviceManager.h"
 
+const NSInteger kOCInvalidRequestID = -1;
+
 @interface OCCastChannel ()
 @property (strong, nonatomic) NSString* sourceId;
 @property (strong, nonatomic) NSString* destinationId;
