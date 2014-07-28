@@ -60,6 +60,9 @@
                 self.transportId = appDict[@"transportId"];
             }
         }
+        
+    } else if ([messageJson[@"type"] isEqualToString:@"LAUNCH_ERROR"]) {
+        [self.delegate applicationFailedToLaunchWithError:messageJson[@"reason"]];
     }
     
     if (!self.isCasting && self.transportId && readyToCast) {
@@ -69,6 +72,8 @@
         [self.mediaChannel setSourceId:self.senderId];
         [self.mediaChannel setDestinationId:self.transportId];
         [self.deviceManager addChannel:self.mediaChannel];
+        
+        [self.delegate applicationDidLaunchSuccessfully];
     }
 }
 
@@ -76,7 +81,8 @@
 
 - (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel didCompleteLoadWithSessionID:(NSInteger)sessionID {
     self.isCasting = YES;
-    [self.mediaChannel play];
+    
+    [self.delegate mediaDidLoadSuccessfully];
 }
 
 - (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel didFailToLoadMediaWithError:(NSError *)error {
@@ -96,17 +102,8 @@
 }
 
 - (void)mediaControlChannelDidUpdateStatus:(OCMediaControlChannel *)mediaControlChannel {
-    if (!self.isCasting && mediaControlChannel) {
-        
-        NSString* url = @"http://commondatastorage.googleapis.com/gtv-videos-bucket/ED_1280.mp4";
-        OCMediaInformation* media = [[OCMediaInformation alloc] initWithContentID:url
-                                                                       streamType:OCMediaStreamTypeBuffered
-                                                                      contentType:@"video/mp4"
-                                                                         metadata:nil
-                                                                   streamDuration:1000.f
-                                                                       customData:nil];
-        
-        [self.mediaChannel loadMedia:media autoplay:NO];
+    if (mediaControlChannel) {
+        [self.delegate mediaReceiverController:self mediaStatusDidUpdate:mediaControlChannel.mediaStatus];
     }
 }
 
