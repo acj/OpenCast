@@ -44,6 +44,41 @@
     return self;
 }
 
+- (void)play {
+    [self.mediaChannel play];
+}
+
+- (void)pause {
+    [self.mediaChannel pause];
+}
+
+- (void)stop {
+    [self.mediaChannel stop];
+}
+
+- (void)seekToPosition:(double)position {
+    [self.mediaChannel seekToTimeInterval:position];
+}
+
+- (void)loadMediaFromURL:(NSString*)url {
+    OCMediaInformation* media = [[OCMediaInformation alloc] initWithContentID:url
+                                                                   streamType:OCMediaStreamTypeBuffered
+                                                                  contentType:@"video/mp4"
+                                                                     metadata:nil
+                                                               streamDuration:0.f
+                                                                   customData:nil];
+    
+    [self.mediaChannel loadMedia:media autoplay:NO];
+}
+
+- (void)setVolume:(double)volumeLevel {
+    [self.mediaChannel setStreamVolume:volumeLevel];
+}
+
+- (void)mute:(BOOL)mute {
+    [self.mediaChannel setStreamMuted:mute];
+}
+
 - (void)didReceiveTextMessage:(NSString *)message {
     NSDictionary* messageJson = [message objectFromJSONString];
     BOOL readyToCast = NO;

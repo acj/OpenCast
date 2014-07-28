@@ -12,6 +12,14 @@
 
 + (id)init;
 
+- (void)play;
+- (void)pause;
+- (void)stop;
+- (void)seekToPosition:(double)position;
+- (void)loadMediaFromURL:(NSString*)url;
+- (void)setVolume:(double)volumeLevel;
+- (void)mute:(BOOL)mute;
+    
 @end
 
 @protocol OCDefaultMediaReceiverControllerDelegate
