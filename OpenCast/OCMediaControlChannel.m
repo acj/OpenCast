@@ -66,7 +66,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
                                                                    streamType:(int)mediaDict[@"streamType"]
                                                                   contentType:mediaDict[@"contentType"]
                                                                      metadata:mediaDict[@"metadata"]
-                                                               streamDuration:(long)mediaDict[@"streamDuration"]
+                                                               streamDuration:(long)mediaDict[@"duration"]
                                                                    customData:mediaDict[@"customData"]];
         
         self.mediaStatus = [[OCMediaStatus alloc] initWithSessionID:[statusDict[@"mediaSessionId"] intValue]
