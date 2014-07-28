@@ -113,7 +113,7 @@
 		6472879E1976164800DE0A0A /* OCMediaMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472879D1976164800DE0A0A /* OCMediaMetadata.m */; };
 		647287A3197B0B1700DE0A0A /* OCDefaultMediaReceiverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 647287A1197B0B1700DE0A0A /* OCDefaultMediaReceiverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		647287A4197B0B1700DE0A0A /* OCDefaultMediaReceiverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 647287A2197B0B1700DE0A0A /* OCDefaultMediaReceiverController.m */; };
-		64B245C219807D170097B094 /* OCMediaStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 64B245C019807D170097B094 /* OCMediaStatus.h */; };
+		64B245C219807D170097B094 /* OCMediaStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 64B245C019807D170097B094 /* OCMediaStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64B245C319807D170097B094 /* OCMediaStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B245C119807D170097B094 /* OCMediaStatus.m */; };
 		64BC9948196CCBBA003968FF /* OCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 64BC9946196CCBBA003968FF /* OCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64BC9949196CCBBA003968FF /* OCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC9947196CCBBA003968FF /* OCDevice.m */; };
@@ -537,6 +537,7 @@
 			files = (
 				647287A3197B0B1700DE0A0A /* OCDefaultMediaReceiverController.h in Headers */,
 				6472879919760F6C00DE0A0A /* OCMediaInformation.h in Headers */,
+				64B245C219807D170097B094 /* OCMediaStatus.h in Headers */,
 				64728652197223DA00DE0A0A /* platform_macros.h in Headers */,
 				6472862B197223DA00DE0A0A /* package_info.h in Headers */,
 				6472865C197223DA00DE0A0A /* type_traits.h in Headers */,
@@ -560,7 +561,6 @@
 				64728651197223DA00DE0A0A /* once.h in Headers */,
 				64728644197223DA00DE0A0A /* atomicops_internals_atomicword_compat.h in Headers */,
 				64728621197223DA00DE0A0A /* generated_enum_reflection.h in Headers */,
-				64B245C219807D170097B094 /* OCMediaStatus.h in Headers */,
 				647286731972243A00DE0A0A /* config.h in Headers */,
 				6472863E197223DA00DE0A0A /* repeated_field.h in Headers */,
 				64728639197223DA00DE0A0A /* message_lite.h in Headers */,
