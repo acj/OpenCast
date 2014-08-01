@@ -34,6 +34,13 @@
 @property (strong, nonatomic) OCMediaInformation* mediaInformation;
 @property (assign, nonatomic) double currentStreamPosition;
 @property (assign, nonatomic) int supportedMediaCommands;
+
+@property (strong, nonatomic) NSString* contentID;
+@property (assign, nonatomic) int streamType;
+@property (strong, nonatomic) NSString* contentType;
+@property (strong, nonatomic) OCMediaMetadata* metadata;
+@property (assign, nonatomic) double streamDuration;
+@property (strong, nonatomic) id customData;
 @end
 
 @implementation OCMediaControlChannel
@@ -63,12 +70,18 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
         
         NSDictionary* const mediaDict = statusDict[@"media"];
         
-        self.mediaInformation = [[OCMediaInformation alloc] initWithContentID:mediaDict[@"contentId"]
-                                                                   streamType:(int)mediaDict[@"streamType"]
-                                                                  contentType:mediaDict[@"contentType"]
-                                                                     metadata:mediaDict[@"metadata"]
-                                                               streamDuration:(long)mediaDict[@"duration"]
-                                                                   customData:mediaDict[@"customData"]];
+        self.contentID      = mediaDict[@"contentId"]              ?: self.contentID;
+        self.streamType     = [mediaDict[@"streamType"] intValue]  ?: self.streamType;
+        self.contentType    = mediaDict[@"contentType"]            ?: self.contentType;
+        self.metadata       = mediaDict[@"metadata"]               ?: self.metadata;
+        self.streamDuration = [mediaDict[@"duration"] doubleValue] ?: self.streamDuration;
+        
+        self.mediaInformation = [[OCMediaInformation alloc] initWithContentID:self.contentID
+                                                                   streamType:self.streamType
+                                                                  contentType:self.contentType
+                                                                     metadata:self.metadata
+                                                               streamDuration:self.streamDuration
+                                                                   customData:self.customData];
         
         self.mediaStatus = [[OCMediaStatus alloc] initWithSessionID:[statusDict[@"mediaSessionId"] intValue]
                                                    mediaInformation:self.mediaInformation];
