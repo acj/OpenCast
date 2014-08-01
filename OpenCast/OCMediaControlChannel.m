@@ -81,7 +81,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
         self.supportedMediaCommands = [statusDict[@"supportedMediaCommands"] intValue];
         
         NSString* const requestType = self.pendingRequests[[NSNumber numberWithLong:requestId]];
-        if ([requestType isEqualToString:@"LOAD"]) {
+        if (isMediaStatus && [requestType isEqualToString:@"LOAD"]) {
             [self.delegate mediaControlChannel:self didCompleteLoadWithSessionID:self.mediaStatus.mediaSessionID];
         }
     }
