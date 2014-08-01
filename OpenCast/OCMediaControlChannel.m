@@ -56,6 +56,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
     NSArray* const statusArray = dict[@"status"];
     const NSInteger requestId = [dict[@"requestId"] integerValue];
     const BOOL isMediaStatus = [dict[@"type"] isEqualToString:@"MEDIA_STATUS"];
+    const BOOL isMediaFailure = [dict[@"type"] isEqualToString:@"LOAD_FAILED"];
     
     if ([dict count]) {
         NSDictionary* statusDict = statusArray.firstObject; // TODO: Handle multiple media sessions
@@ -83,6 +84,12 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
         NSString* const requestType = self.pendingRequests[[NSNumber numberWithLong:requestId]];
         if (isMediaStatus && [requestType isEqualToString:@"LOAD"]) {
             [self.delegate mediaControlChannel:self didCompleteLoadWithSessionID:self.mediaStatus.mediaSessionID];
+        } else if (isMediaFailure && [requestType isEqualToString:@"LOAD"]) {
+            NSMutableDictionary* details = [NSMutableDictionary dictionary];
+            [details setValue:@"Failed to load media" forKey:NSLocalizedDescriptionKey];
+            
+            NSError* error = [[NSError alloc] initWithDomain:@"load_failed" code:-1 userInfo:details];
+            [self.delegate mediaControlChannel:self didFailToLoadMediaWithError:error];
         }
     }
     
