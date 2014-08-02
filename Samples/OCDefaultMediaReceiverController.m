@@ -41,6 +41,7 @@
     self = [super initWithNamespace:protocolNamespace];
     
     if (self) {
+        self.status = [[OCMediaReceiverStatus alloc] init];
         self.senderId = [self generateSenderId];
         
         self.mediaChannel = [[OCMediaControlChannel alloc] init];
@@ -90,18 +91,43 @@
     BOOL readyToCast = NO;
     
     if ([messageJson[@"type"] isEqualToString:@"RECEIVER_STATUS"]) {
-        NSArray* applications = [[messageJson objectForKey:@"status"] objectForKey:@"applications"];
-        NSDictionary* appDict = applications[0];
+        NSDictionary* const statusDict = messageJson[@"status"];
         
-        if (appDict) {
-            readyToCast = [appDict[@"statusText"] isEqualToString:@"Ready To Cast"];
-            self.isCasting = [appDict[@"statusText"] isEqualToString:@"Now Casting"];
+        self.status.isActiveInput = statusDict[@"isActiveInput"]    ? [statusDict[@"isActiveInput"] boolValue]     : self.status.isActiveInput;
+        self.status.isStandBy     = statusDict[@"isStandBy"]        ? [statusDict[@"isStandBy"] boolValue]         : self.status.isStandBy;
+        self.status.volumeLevel   = statusDict[@"volume"][@"level"] ? [statusDict[@"volume"][@"level"] floatValue] : self.status.volumeLevel;
+        self.status.volumeMuted   = statusDict[@"volume"][@"muted"] ? [statusDict[@"volume"][@"muted"] boolValue]  : self.status.volumeMuted;
+        
+        NSArray* runningApplications = [[messageJson objectForKey:@"status"] objectForKey:@"applications"];
+        
+        if (runningApplications) {
+            self.status.applications = [[NSMutableArray alloc] init];
             
-            if (!appDict[@"isStandby"]) {
-                self.transportId = appDict[@"transportId"];
+            for (NSDictionary* appDict in runningApplications) {
+                OCMediaReceiverApplication* app = [[OCMediaReceiverApplication alloc] init];
+                
+                app.appId = appDict[@"appId"];
+                app.displayName = appDict[@"displayName"];
+                app.namespaces = appDict[@"namespaces"];
+                app.statusText = appDict[@"statusText"];
+                app.transportId = appDict[@"transportId"];
+                
+                [self.status.applications addObject:app];
             }
         }
         
+        
+        OCMediaReceiverApplication* receiverApp = [self mediaReceiverApplication];
+        if (receiverApp) {
+            readyToCast = [receiverApp.statusText isEqualToString:@"Ready To Cast"];
+            self.isCasting = [receiverApp.statusText isEqualToString:@"Now Casting"];
+            
+            if (!self.status.isStandBy) {
+                self.transportId = receiverApp.transportId;
+            }
+            
+            [self.delegate mediaReceiverController:self statusDidUpdate:self.status];
+        }
     } else if ([messageJson[@"type"] isEqualToString:@"LAUNCH_ERROR"]) {
         [self.delegate applicationFailedToLaunchWithError:messageJson[@"reason"]];
     }
@@ -152,6 +178,16 @@
 
 - (NSString*)generateSenderId {
     return [NSString stringWithFormat:@"sender-%d", arc4random() % 99999];
+}
+
+- (OCMediaReceiverApplication*)mediaReceiverApplication {
+    for (OCMediaReceiverApplication* app in self.status.applications) {
+        if ( [app.appId isEqualToString:kOCMediaDefaultReceiverApplicationID]) {
+            return app;
+        }
+    }
+    
+    return nil;
 }
 
 @end

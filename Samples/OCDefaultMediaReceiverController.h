@@ -27,6 +27,7 @@
 @interface OCDefaultMediaReceiverController : OCCastChannel
 
 @property (weak, nonatomic) id<OCDefaultMediaReceiverControllerDelegate> delegate;
+@property (strong, nonatomic) OCMediaReceiverStatus* status;
 
 + (id)init;
 
@@ -44,5 +45,6 @@
 - (void)applicationDidLaunchSuccessfully;
 - (void)applicationFailedToLaunchWithError:(NSString*)reason;
 - (void)mediaDidLoadSuccessfully;
+- (void)mediaReceiverController:(OCDefaultMediaReceiverController*)controller statusDidUpdate:(OCMediaReceiverStatus*)receiverStatus;
 - (void)mediaReceiverController:(OCDefaultMediaReceiverController*)controller mediaStatusDidUpdate:(OCMediaStatus*)mediaStatus;
 @end
