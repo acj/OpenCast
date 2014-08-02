@@ -86,6 +86,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
         self.mediaStatus = [[OCMediaStatus alloc] initWithSessionID:[statusDict[@"mediaSessionId"] intValue]
                                                    mediaInformation:self.mediaInformation];
         
+        [self.mediaStatus setValue:@([statusDict[@"currentTime"] floatValue]) forKey:@"streamPosition"];
         [self.mediaStatus setValue:@([statusDict[@"playbackRate"] floatValue]) forKey:@"playbackRate"];
         [self.mediaStatus setValue:@([statusDict[@"playerState"] integerValue]) forKey:@"playerState"];
         [self.mediaStatus setValue:@([statusDict[@"volume"][@"level"] integerValue]) forKey:@"volume"];
