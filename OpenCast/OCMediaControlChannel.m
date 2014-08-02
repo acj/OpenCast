@@ -279,7 +279,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
     
     [self.deviceManager sendTextMessage:[volumeDict JSONString]
                               namespace:OpenCastNamespaceReceiver
-                               sourceId:self.sourceId
+                               sourceId:SourceIdDefault
                           destinationId:DestinationIdDefault];
     
     return requestId;
@@ -304,7 +304,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
     
     [self.deviceManager sendTextMessage:[volumeDict JSONString]
                               namespace:OpenCastNamespaceReceiver
-                               sourceId:self.sourceId
+                               sourceId:SourceIdDefault
                           destinationId:DestinationIdDefault];
     
     return requestId;
