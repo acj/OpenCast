@@ -25,6 +25,12 @@
                destinationId:(NSString*)destinationId;
 @end
 
+@implementation OCMediaReceiverApplication
+@end
+
+@implementation OCMediaReceiverStatus
+@end
+
 @implementation OCDefaultMediaReceiverController
 
 + (id)init {

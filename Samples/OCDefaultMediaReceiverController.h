@@ -6,6 +6,24 @@
 
 @protocol OCDefaultMediaReceiverControllerDelegate;
 
+@interface OCMediaReceiverApplication : NSObject
+@property (strong, nonatomic) NSString* appId;
+@property (strong, nonatomic) NSString* displayName;
+@property (strong, nonatomic) NSArray* namespaces;
+@property (strong, nonatomic) NSString* sessionId;
+@property (strong, nonatomic) NSString* statusText;
+@property (strong, nonatomic) NSString* transportId;
+@end
+
+@interface OCMediaReceiverStatus : NSObject
+@property (assign, nonatomic) int lastRequestId;
+@property (strong, nonatomic) NSMutableArray* applications;
+@property (assign, nonatomic) BOOL isActiveInput;
+@property (assign, nonatomic) BOOL isStandBy;
+@property (assign, nonatomic) float volumeLevel;
+@property (assign, nonatomic) BOOL volumeMuted;
+@end
+
 @interface OCDefaultMediaReceiverController : OCCastChannel
 
 @property (weak, nonatomic) id<OCDefaultMediaReceiverControllerDelegate> delegate;
