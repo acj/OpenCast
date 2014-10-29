@@ -75,10 +75,10 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
 }
 
 - (void)disconnect {
-    // TODO
-    
     [self.rawInputStream close];
     [self.rawOutputStream close];
+    
+    [self.delegate deviceManager:self didDisconnectWithError:nil];
 }
 
 - (BOOL)sendTextMessage:(NSString*)textMessage namespace:(NSString*)protocolNamespace {
