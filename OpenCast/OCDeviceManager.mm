@@ -286,13 +286,15 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
 }
 
 - (BOOL)stopApplication {
-    NSDictionary* messageDict = @{ @"type" : @"STOP" };
+    NSDictionary* messageDict = @{ @"type" : @"STOP",
+                                   @"requestId" : [self.channels[OpenCastNamespaceHeartbeat] generateRequestNumber] };
     return [self.channels[OpenCastNamespaceReceiver] sendTextMessage:[messageDict JSONString]];
 }
 
 - (BOOL)stopApplicationWithSessionID:(NSString *)sessionID {
     NSDictionary* messageDict = @{ @"type" : @"STOP",
-                                   @"sessionId" : sessionID };
+                                   @"sessionId" : sessionID,
+                                   @"requestId" : [self.channels[OpenCastNamespaceHeartbeat] generateRequestNumber] };
     return [self.channels[OpenCastNamespaceReceiver] sendTextMessage:[messageDict JSONString]];
 }
 
