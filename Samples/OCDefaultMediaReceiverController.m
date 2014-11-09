@@ -146,6 +146,7 @@
         [self.deviceManager addChannel:self.mediaChannel];
         
         [self.delegate applicationDidLaunchSuccessfully];
+        [self requestMediaStatus];
     }
 }
 
@@ -174,6 +175,10 @@
 - (void)mediaControlChannelDidUpdateStatus:(OCMediaControlChannel *)mediaControlChannel {
     if (mediaControlChannel) {
         [self.delegate mediaReceiverController:self mediaStatusDidUpdate:mediaControlChannel.mediaStatus];
+        
+        if (mediaControlChannel.mediaStatus.playerState == OCMediaPlayerStatePlaying) {
+            [self performSelector:@selector(requestMediaStatus) withObject:nil afterDelay:1.f];
+        }
     }
 }
 
@@ -181,6 +186,10 @@
 
 - (NSString*)generateSenderId {
     return [NSString stringWithFormat:@"sender-%d", arc4random() % 99999];
+}
+
+- (void)requestMediaStatus {
+    [self.mediaChannel requestStatus];
 }
 
 - (OCMediaReceiverApplication*)mediaReceiverApplication {
