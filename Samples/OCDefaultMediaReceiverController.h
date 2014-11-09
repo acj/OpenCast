@@ -28,6 +28,7 @@
 
 @property (weak, nonatomic) id<OCDefaultMediaReceiverControllerDelegate> delegate;
 @property (strong, nonatomic, readonly) OCMediaReceiverStatus* status;
+@property (strong, nonatomic, readonly) OCMediaStatus* mediaStatus;
 
 + (id)init;
 

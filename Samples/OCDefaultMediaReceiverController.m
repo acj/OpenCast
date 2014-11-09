@@ -51,6 +51,10 @@
     return self;
 }
 
+- (OCMediaStatus *)mediaStatus {
+    return self.mediaChannel.mediaStatus;
+}
+
 - (void)play {
     [self.mediaChannel play];
 }
