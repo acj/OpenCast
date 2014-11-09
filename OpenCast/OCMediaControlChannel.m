@@ -8,6 +8,20 @@
 #import "OCMediaMetadata.h"
 #import "OCMediaStatus.h"
 
+static NSUInteger _playerStateFromString(NSString* playerStateString) {
+    if ([playerStateString isEqualToString:@"PLAYING"]) {
+        return OCMediaPlayerStatePlaying;
+    } else if ([playerStateString isEqualToString:@"BUFFERING"]) {
+        return OCMediaPlayerStateBuffering;
+    } else if ([playerStateString isEqualToString:@"IDLE"]) {
+        return OCMediaPlayerStateIdle;
+    } else if ([playerStateString isEqualToString:@"PAUSED"]) {
+        return OCMediaPlayerStatePaused;
+    } else {
+        return OCMediaPlayerStateUnknown;
+    }
+}
+
 // Friend access to OCMediaInformation
 @interface OCMediaInformation ()
 @property (strong, nonatomic) NSString* contentID;
@@ -88,7 +102,7 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
         
         [self.mediaStatus setValue:@([statusDict[@"currentTime"] floatValue]) forKey:@"streamPosition"];
         [self.mediaStatus setValue:@([statusDict[@"playbackRate"] floatValue]) forKey:@"playbackRate"];
-        [self.mediaStatus setValue:@([statusDict[@"playerState"] integerValue]) forKey:@"playerState"];
+        [self.mediaStatus setValue:@(_playerStateFromString(statusDict[@"playerState"])) forKey:@"playerState"];
         [self.mediaStatus setValue:@([statusDict[@"volume"][@"level"] integerValue]) forKey:@"volume"];
         [self.mediaStatus setValue:@([statusDict[@"volume"][@"muted"] boolValue]) forKey:@"isMuted"];
         
