@@ -121,20 +121,16 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
     switch (eventCode) {
         case NSStreamEventNone:
         {
-            NSLog(@"None");
             break;
         }
         case NSStreamEventEndEncountered:
         {
-            NSLog(@"EndEncountered");
-            
             [self.rawInputStream close];
             [self.rawOutputStream close];
             break;
         }
         case NSStreamEventErrorOccurred:
         {
-            NSLog(@"ErrorOccurred");
             NSMutableDictionary* details = [NSMutableDictionary dictionary];
             [details setValue:@"Failed to open stream" forKey:NSLocalizedDescriptionKey];
             NSError* error = [NSError errorWithDomain:@"stream" code:eventCode userInfo:details];
@@ -143,7 +139,6 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
         }
         case NSStreamEventHasBytesAvailable:
         {
-            NSLog(@"BytesAvailable");
             const int WAITING_FOR_HEADER = 0;
             const int WAITING_FOR_MESSAGE = 1;
 
@@ -189,23 +184,19 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
                 NSString* namespaceString = [NSString stringWithCString:readMessage->namespace_().c_str() encoding:[NSString defaultCStringEncoding]];
                 
                 NSLog(@"Recv [%@]: %@", namespaceString, [NSString stringWithCString:readMessage->payload_utf8().c_str() encoding:NSUTF8StringEncoding]);
-                if ( namespaceString && self.channels[namespaceString]) {
+                if (namespaceString && self.channels[namespaceString]) {
                     [(OCCastChannel*)self.channels[namespaceString] didReceiveTextMessage:[NSString stringWithCString:readMessage->payload_utf8().c_str() encoding:[NSString defaultCStringEncoding]]];
                 }
                 
                 readState = WAITING_FOR_HEADER;
                 bytesInBuffer = 0;
                 memset(buffer, 0, BUFFER_SIZE);
-            } else {
-                NSLog(@"Waiting for more bytes (read so far: %d)", bytesInBuffer);
-                break;
             }
             
             break;
         }
         case NSStreamEventHasSpaceAvailable:
         {
-            NSLog(@"SpaceAvailable");
             if (!self.isConnected && self.readStreamIsConnected && self.writeStreamIsConnected) {
                 _isConnected = YES;
                 [self prepareBaseChannels];
@@ -217,8 +208,6 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
         }
         case NSStreamEventOpenCompleted:
         {
-            NSLog(@"OpenCompleted");
-            
             if ([stream isKindOfClass:[NSInputStream class]]) {
                 self.readStreamIsConnected = YES;
             } else if ([stream isKindOfClass:[NSOutputStream class]]) {
