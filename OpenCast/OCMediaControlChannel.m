@@ -336,8 +336,6 @@ NSString* const kOCMediaDefaultReceiverApplicationID = @"CC1AD845";
     [self.pendingRequests removeObjectForKey:[NSNumber numberWithLong:requestId]];
 }
 
-- (void)didConnect {
-    [self requestStatus];
-}
+- (void)didConnect { }
 
 @end
