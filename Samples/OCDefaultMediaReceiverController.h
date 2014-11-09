@@ -27,7 +27,7 @@
 @interface OCDefaultMediaReceiverController : OCCastChannel
 
 @property (weak, nonatomic) id<OCDefaultMediaReceiverControllerDelegate> delegate;
-@property (strong, nonatomic) OCMediaReceiverStatus* status;
+@property (strong, nonatomic, readonly) OCMediaReceiverStatus* status;
 
 + (id)init;
 

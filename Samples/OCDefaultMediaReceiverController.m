@@ -41,11 +41,11 @@
     self = [super initWithNamespace:protocolNamespace];
     
     if (self) {
-        self.status = [[OCMediaReceiverStatus alloc] init];
-        self.senderId = [self generateSenderId];
+        _status = [[OCMediaReceiverStatus alloc] init];
+        _senderId = [self generateSenderId];
         
-        self.mediaChannel = [[OCMediaControlChannel alloc] init];
-        self.mediaChannel.delegate = self;
+        _mediaChannel = [[OCMediaControlChannel alloc] init];
+        _mediaChannel.delegate = self;
     }
     
     return self;
