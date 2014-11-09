@@ -7,7 +7,7 @@
 
 @interface OCDefaultMediaReceiverController () <OCMediaControlChannelDelegate>
 @property (strong, nonatomic) OCMediaControlChannel* mediaChannel;
-@property (assign, nonatomic) BOOL isCasting;
+@property (assign, nonatomic) BOOL applicationHasLaunched;
 @property (strong, nonatomic) NSString* senderId;
 @property (strong, nonatomic) NSString* transportId;
 @end
@@ -120,7 +120,6 @@
         OCMediaReceiverApplication* receiverApp = [self mediaReceiverApplication];
         if (receiverApp) {
             readyToCast = [receiverApp.statusText isEqualToString:@"Ready To Cast"];
-            self.isCasting = [receiverApp.statusText isEqualToString:@"Now Casting"];
             
             if (!self.status.isStandBy) {
                 self.transportId = receiverApp.transportId;
@@ -132,7 +131,9 @@
         [self.delegate applicationFailedToLaunchWithError:messageJson[@"reason"]];
     }
     
-    if (!self.isCasting && self.transportId && readyToCast) {
+    if (!self.applicationHasLaunched && self.transportId && readyToCast) {
+        self.applicationHasLaunched = YES;
+        
         // Connect to the application
         [self.deviceManager sendTextMessage:@"{\"type\":\"CONNECT\"}" namespace:OpenCastNamespaceConnection sourceId:self.senderId destinationId:self.transportId];
         
@@ -147,8 +148,6 @@
 #pragma mark - OCMediaControlChannelDelegate
 
 - (void)mediaControlChannel:(OCMediaControlChannel *)mediaControlChannel didCompleteLoadWithSessionID:(NSInteger)sessionID {
-    self.isCasting = YES;
-    
     [self.delegate mediaDidLoadSuccessfully];
 }
 
