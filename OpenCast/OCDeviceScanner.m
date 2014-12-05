@@ -52,12 +52,16 @@ static OCDevice* _ocDeviceFromNsNetService(NSNetService* service) {
 @implementation OCDeviceScanner
 
 - (id)init {
-    _devices = [[NSMutableArray alloc] init];
-    _hasDiscoveredDevices = NO;
-    _scanning = NO;
+    self = [super init];
     
-    _listeners = [[NSMutableArray alloc] init];
-    _pendingServices = [[NSMutableArray alloc] init];
+    if (self) {
+        _devices = [[NSMutableArray alloc] init];
+        _hasDiscoveredDevices = NO;
+        _scanning = NO;
+        
+        _listeners = [[NSMutableArray alloc] init];
+        _pendingServices = [[NSMutableArray alloc] init];
+    }
     
     return self;
 }

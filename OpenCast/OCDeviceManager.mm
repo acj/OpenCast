@@ -37,8 +37,12 @@ NSString* const TextMessageClose = @"{\"type\":\"CLOSE\"}";
 @implementation OCDeviceManager
 
 - (id)initWithDevice:(OCDevice *)device clientPackageName:(NSString *)clientPackageName {
-    _device = device;
-    _channels = [[NSMutableDictionary alloc] init];
+    self = [super init];
+    
+    if (self) {
+        _device = device;
+        _channels = [[NSMutableDictionary alloc] init];
+    }
     
     return self;
 }
