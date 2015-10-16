@@ -646,7 +646,7 @@
 		641D83C0196CB592001700EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Adam Jensen";
 				TargetAttributes = {
 					641D83DF196CB592001700EC = {
@@ -799,6 +799,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -868,6 +869,7 @@
 				);
 				INFOPLIST_FILE = "OpenCast/OpenCast-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.linuxguy.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -892,6 +894,7 @@
 				);
 				INFOPLIST_FILE = "OpenCast/OpenCast-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.linuxguy.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -915,6 +918,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "OpenCastTests/OpenCastTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.linuxguy.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -933,6 +937,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCast/OpenCast-Prefix.pch";
 				INFOPLIST_FILE = "OpenCastTests/OpenCastTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.linuxguy.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
