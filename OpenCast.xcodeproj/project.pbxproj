@@ -17,9 +17,9 @@
 		641D83F9196CB874001700EC /* OCDeviceScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 641D83F7196CB874001700EC /* OCDeviceScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		641D83FA196CB874001700EC /* OCDeviceScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641D83F8196CB874001700EC /* OCDeviceScanner.m */; };
 		646CF6381972207F00AFEC08 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 646CF6371972207F00AFEC08 /* libz.dylib */; };
-		64728615197223DA00DE0A0A /* descriptor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 64728566197223DA00DE0A0A /* descriptor.cc */; };
+		64728615197223DA00DE0A0A /* descriptor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 64728566197223DA00DE0A0A /* descriptor.cc */; settings = {COMPILER_FLAGS = "-Wno-unused -Wno-tautological-undefined-compare"; }; };
 		64728616197223DA00DE0A0A /* descriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 64728567197223DA00DE0A0A /* descriptor.h */; };
-		64728617197223DA00DE0A0A /* descriptor.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 64728568197223DA00DE0A0A /* descriptor.pb.cc */; };
+		64728617197223DA00DE0A0A /* descriptor.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 64728568197223DA00DE0A0A /* descriptor.pb.cc */; settings = {COMPILER_FLAGS = "-Wno-unused"; }; };
 		64728618197223DA00DE0A0A /* descriptor.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 64728569197223DA00DE0A0A /* descriptor.pb.h */; };
 		64728619197223DA00DE0A0A /* descriptor.proto in Resources */ = {isa = PBXBuildFile; fileRef = 6472856A197223DA00DE0A0A /* descriptor.proto */; };
 		6472861A197223DA00DE0A0A /* descriptor_database.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6472856B197223DA00DE0A0A /* descriptor_database.cc */; };
@@ -83,7 +83,7 @@
 		64728654197223DA00DE0A0A /* stringprintf.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285A7197223DA00DE0A0A /* stringprintf.cc */; };
 		64728655197223DA00DE0A0A /* stringprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 647285A8197223DA00DE0A0A /* stringprintf.h */; };
 		64728656197223DA00DE0A0A /* structurally_valid.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285A9197223DA00DE0A0A /* structurally_valid.cc */; };
-		64728657197223DA00DE0A0A /* strutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285AA197223DA00DE0A0A /* strutil.cc */; };
+		64728657197223DA00DE0A0A /* strutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285AA197223DA00DE0A0A /* strutil.cc */; settings = {COMPILER_FLAGS = "-Wno-unused"; }; };
 		64728658197223DA00DE0A0A /* strutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 647285AB197223DA00DE0A0A /* strutil.h */; };
 		64728659197223DA00DE0A0A /* substitute.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285AC197223DA00DE0A0A /* substitute.cc */; };
 		6472865A197223DA00DE0A0A /* substitute.h in Headers */ = {isa = PBXBuildFile; fileRef = 647285AD197223DA00DE0A0A /* substitute.h */; };
@@ -93,7 +93,7 @@
 		6472866A197223DA00DE0A0A /* text_format.h in Headers */ = {isa = PBXBuildFile; fileRef = 647285BF197223DA00DE0A0A /* text_format.h */; };
 		6472866B197223DA00DE0A0A /* unknown_field_set.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285C0197223DA00DE0A0A /* unknown_field_set.cc */; };
 		6472866C197223DA00DE0A0A /* unknown_field_set.h in Headers */ = {isa = PBXBuildFile; fileRef = 647285C1197223DA00DE0A0A /* unknown_field_set.h */; };
-		6472866D197223DA00DE0A0A /* wire_format.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285C2197223DA00DE0A0A /* wire_format.cc */; };
+		6472866D197223DA00DE0A0A /* wire_format.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285C2197223DA00DE0A0A /* wire_format.cc */; settings = {COMPILER_FLAGS = "-Wno-unused"; }; };
 		6472866E197223DA00DE0A0A /* wire_format.h in Headers */ = {isa = PBXBuildFile; fileRef = 647285C3197223DA00DE0A0A /* wire_format.h */; };
 		6472866F197223DA00DE0A0A /* wire_format_lite.cc in Sources */ = {isa = PBXBuildFile; fileRef = 647285C4197223DA00DE0A0A /* wire_format_lite.cc */; };
 		64728670197223DA00DE0A0A /* wire_format_lite.h in Headers */ = {isa = PBXBuildFile; fileRef = 647285C5197223DA00DE0A0A /* wire_format_lite.h */; };
@@ -104,7 +104,7 @@
 		6472867D1974AC1800DE0A0A /* OCHeartbeatChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472867B1974AC1800DE0A0A /* OCHeartbeatChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6472867E1974AC1800DE0A0A /* OCHeartbeatChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472867C1974AC1800DE0A0A /* OCHeartbeatChannel.m */; };
 		647287911975FB0B00DE0A0A /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472878F1975FB0B00DE0A0A /* JSONKit.h */; };
-		647287921975FB0B00DE0A0A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 647287901975FB0B00DE0A0A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		647287921975FB0B00DE0A0A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 647287901975FB0B00DE0A0A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Wno-deprecated-objc-pointer-introspection"; }; };
 		6472879519760BD200DE0A0A /* OCMediaControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879319760BD200DE0A0A /* OCMediaControlChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6472879619760BD200DE0A0A /* OCMediaControlChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6472879419760BD200DE0A0A /* OCMediaControlChannel.m */; };
 		6472879919760F6C00DE0A0A /* OCMediaInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6472879719760F6C00DE0A0A /* OCMediaInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -862,6 +862,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCast/OpenCast-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -887,6 +888,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCast/OpenCast-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
